@@ -1,80 +1,84 @@
 import Link from "next/link";
 
 import { departments } from "./data";
+
 import { Icon } from "./Icons";
 
 export function Departments() {
+
   return (
+
     <section
       className="section compact-section"
       id="departments"
     >
+
       <div className="container">
-        <h2 className="section-title">
-          Our Departments
-        </h2>
+
+        <div className="section-heading">
+
+         
+
+          <h2 className="section-title">
+            Our Departments
+          </h2>
+
+          
+
+        </div>
 
         <div className="department-grid">
+
           {departments.map(
             (department) => {
-              if (
-                department.name ===
-                "View All"
-              ) {
-                return (
-                  <Link
-                    href="/departments"
-                    className="department-item"
-                    key={
-                      department.name
-                    }
-                  >
-                    <span>
+
+              return (
+
+                <Link
+                  key={department.name}
+                  href={
+                    department.slug ===
+                    "departments"
+                      ? "/departments"
+                      : `/departments/${department.slug}`
+                  }
+                  className="department-item"
+                >
+
+                  <div className="department-icon-wrapper">
+
+                    <span className="department-icon-circle">
+
                       <Icon
                         name={
                           department.icon
                         }
                         size={42}
                       />
+
                     </span>
 
-                    <strong>
-                      {
-                        department.name
-                      }
-                    </strong>
-                  </Link>
-                );
-              }
-
-              return (
-                <a
-                  className="department-item"
-                  href="#"
-                  key={
-                    department.name
-                  }
-                >
-                  <span>
-                    <Icon
-                      name={
-                        department.icon
-                      }
-                      size={42}
-                    />
-                  </span>
+                  </div>
 
                   <strong>
-                    {
-                      department.name
-                    }
+                    {department.name}
                   </strong>
-                </a>
+
+                  <div className="department-hover-text">
+
+                    Learn More →
+
+                  </div>
+
+                </Link>
               );
             }
           )}
+
         </div>
+
       </div>
+
     </section>
   );
 }

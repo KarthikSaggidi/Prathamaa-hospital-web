@@ -1,177 +1,135 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import { Icon } from "@/components/Icons";
-
-import logo from "@/assests/logo.jpg";
 
 const departments = [
 
   {
-
-    name: "General Medicine",
-
-    icon: "hospital",
-
-    description:
-
-      "Comprehensive healthcare services for diagnosis, treatment, and prevention of common illnesses.",
-
-  },
-
-  {
-
-    name: "Gynecology",
-
-    icon: "gynecology",
-
-    description:
-
-      "Specialized care for women's reproductive health, pregnancy, and wellness.",
-
-  },
-
-  {
-
-    name: "Plastic Surgery",
-
-    icon: "user",
-
-    description:
-
-      "Advanced reconstructive and cosmetic procedures performed with precision and care.",
-
-  },
-
-  {
-
-    name: "Women & Children Care",
-
-    icon: "baby",
-
-    description:
-
-      "Dedicated healthcare services for mothers, infants, and children.",
-
-  },
-
-  {
-
-    name: "Dermatology",
-
-    icon: "star",
-
-    description:
-
-      "Expert treatment for skin, hair, and nail conditions using advanced technologies.",
-
-  },
-
-  {
-
-    name: "Diabetics Care",
-
-    icon: "heart",
-
-    description:
-
-      "Comprehensive diabetes management and lifestyle guidance for healthier living.",
-
-  },
-
-  {
-
-    name: "General & Laparoscopic Surgery",
-
-    icon: "plus",
-
-    description:
-
-      "Modern minimally invasive surgeries with faster recovery and precision care.",
-
-  },
-
-  {
-
     name: "Pediatrics",
-
+    slug: "pediatrics",
     icon: "baby",
-
     description:
-
       "Complete healthcare services for infants, children, and adolescents.",
-
   },
 
   {
+    name: "Gynaecology & Obstetrics",
+    slug: "gynecology",
+    icon: "gynecology",
+    description:
+      "Specialized care for women's reproductive health, pregnancy, and maternity wellness.",
+  },
 
-    name: "Anesthesia",
+  {
+    name: "General Surgery",
+    slug: "general-laparoscopic-surgery",
+    icon: "plus",
+    description:
+      "Advanced surgical procedures with modern laparoscopic and minimally invasive techniques.",
+  },
 
+  {
+    name: "Anaesthesia",
+    slug: "anesthesia",
     icon: "clock",
-
     description:
-
       "Safe and effective anesthesia support for surgical and emergency procedures.",
-
   },
 
   {
-
-    name: "Radiology",
-
-    icon: "search",
-
-    description:
-
-      "Advanced imaging services including X-Ray, Ultrasound, and diagnostic scans.",
-
-  },
-
-  {
-
-    name: "Medical Gastrology",
-
-    icon: "activity",
-
-    description:
-
-      "Specialized treatment for digestive system disorders and gastrointestinal diseases.",
-
-  },
-
-  {
-
-    name: "Implantology",
-
-    icon: "grid",
-
-    description:
-
-      "Modern dental implant solutions for restoring healthy and confident smiles.",
-
-  },
-
-  {
-
-    name: "Maxio Facial Surgery",
-
-    icon: "user",
-
-    description:
-
-      "Expert surgical care for facial trauma, jaw correction, and oral conditions.",
-
-  },
-
-  {
-
-    name: "Orthopedics Sports Medicine",
-
+    name: "orthopedics-sports-medicine",
+    slug: "orthopedics-sports-medicine",
     icon: "bone",
-
     description:
+      "Comprehensive treatment for bones, joints, fractures, arthritis, and sports injuries.",
+  },
 
-      "Comprehensive bone, joint, and sports injury treatment with rehabilitation care.",
+  {
+    name: "General Medicine",
+    slug: "general-medicine",
+    icon: "hospital",
+    description:
+      "Comprehensive healthcare services for diagnosis, treatment, and prevention of illnesses.",
+  },
 
+  {
+    name: "Cardiology",
+    slug: "cardiology",
+    icon: "heart",
+    description:
+      "Advanced heart care services including ECG, cardiac diagnosis, and hypertension management.",
+  },
+
+  {
+    name: "Urology",
+    slug: "urology",
+    icon: "activity",
+    description:
+      "Specialized care for urinary tract disorders and kidney-related conditions.",
+  },
+
+  {
+    name: "Neurology",
+    slug: "neurology",
+    icon: "brain",
+    description:
+      "Expert diagnosis and treatment for brain, nerve, and spinal disorders.",
+  },
+
+  {
+    name: "Nephrology",
+    slug: "nephrology",
+    icon: "activity",
+    description:
+      "Advanced kidney care and treatment for renal disorders and hypertension.",
+  },
+
+  {
+    name: "Radiology",
+    slug: "radiology",
+    icon: "search",
+    description:
+      "Advanced imaging services including X-Ray, CT Scan, MRI, and Ultrasound.",
+  },
+
+  {
+    name: "Dermatology",
+    slug: "dermatology",
+    icon: "star",
+    description:
+      "Expert skin, hair, and nail care treatments using advanced technologies.",
+  },
+
+  {
+    name: "ENT",
+    slug: "ent",
+    icon: "activity",
+    description:
+      "Specialized treatment for ear, nose, throat, sinus, and hearing disorders.",
+  },
+
+  {
+    name: "Maxillo Facial Surgery",
+    slug: "maxillo-facial-surgery",
+    icon: "user",
+    description:
+      "Expert surgical care for jaw correction, facial trauma, and oral conditions.",
+  },
+
+  {
+    name: "Plastic Surgery",
+    slug: "plastic-surgery",
+    icon: "user",
+    description:
+      "Advanced cosmetic and reconstructive surgeries performed with precision and care.",
+  },
+
+  {
+    name: "Dental Implantology",
+    slug: "dental-implantology",
+    icon: "grid",
+    description:
+      "Modern dental implant solutions for restoring healthy and confident smiles.",
   },
 
 ];
@@ -186,40 +144,17 @@ export default function DepartmentsPage() {
 
         <div className="departments-page-header">
 
-          <div className="departments-page-logo">
-
-            <Image
-
-              src={logo}
-
-              alt="Prathamaa Hospital"
-
-              priority
-
-            />
-
-          </div>
-
           <h1>
-
             Our Departments
-
           </h1>
 
           <p>
-
-            Explore the specialized
-
-            healthcare departments
-
-            available at Prathamaa
-
-            Hospital with advanced
-
-            medical facilities and
-
-            experienced doctors.
-
+            Explore the specialized healthcare
+            departments available at Prathamaa
+            Hospital with advanced medical
+            facilities, modern technologies,
+            and experienced doctors dedicated
+            to providing world-class patient care.
           </p>
 
         </div>
@@ -227,57 +162,39 @@ export default function DepartmentsPage() {
         <div className="departments-list-grid">
 
           {departments.map(
-
             (department) => (
 
-              <div
-
+              <Link
+                href={`/departments/${department.slug}`}
                 className="department-box"
-
-                key={
-
-                  department.name
-
-                }
-
+                key={department.name}
               >
 
                 <div className="department-icon">
 
                   <Icon
-
-                    name={
-
-                      department.icon
-
-                    }
-
+                    name={department.icon}
                     size={42}
-
                   />
 
                 </div>
 
                 <h3>
-
                   {department.name}
-
                 </h3>
 
                 <p>
-
-                  {
-
-                    department.description
-
-                  }
-
+                  {department.description}
                 </p>
 
-              </div>
+                <div className="department-read-more">
 
+                  Learn More →
+
+                </div>
+
+              </Link>
             )
-
           )}
 
         </div>
@@ -285,7 +202,5 @@ export default function DepartmentsPage() {
       </div>
 
     </main>
-
   );
-
 }

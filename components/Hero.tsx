@@ -54,7 +54,7 @@ export function Hero() {
           </h1>
 
           <p className="hero-text">
-            Prathama Hospital is
+            Prathamaa Hospital is
             committed to providing
             exceptional healthcare
             with compassion and

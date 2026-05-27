@@ -73,38 +73,69 @@ export const serviceCards = [
 
 export const departments = [
   {
-    name: "Cardiology",
-    icon: "heart",
-  },
 
-  {
-    name: "Neurology",
-    icon: "brain",
-  },
-
-  {
-    name: "Orthopedics",
-    icon: "bone",
-  },
-
-  {
     name: "Pediatrics",
+
     icon: "baby",
+
+    slug: "pediatrics",
+
   },
 
   {
-    name: "Gynecology",
+
+    name: "Gynaecology and Obstetrics",
+
     icon: "gynecology",
+
+    slug: "gynecology",
+
   },
 
   {
+
+    name: "General Surgery",
+
+    icon: "plus",
+
+    slug: "general-laparoscopic-surgery",
+
+  },
+
+  {
+
+    name: "Anaesthesia",
+
+    icon: "clock",
+
+    slug: "anesthesia",
+
+  },
+
+  {
+
+    name: "Orthopaedic",
+
+    icon: "bone",
+
+    slug: "orthopedics",
+
+  },
+
+  {
+
     name: "General Medicine",
-    icon: "stethoscope",
+
+    icon: "hospital",
+
+    slug: "general-medicine",
+
   },
 
   {
     name: "View All",
     icon: "grid",
+    slug: "departments",
   },
 ];
 

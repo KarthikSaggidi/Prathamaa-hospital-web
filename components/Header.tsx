@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
 import Link from "next/link";
-
 import { usePathname } from "next/navigation";
 
 import {
@@ -12,7 +10,6 @@ import {
 } from "react";
 
 import logo from "@/assests/logo.jpg";
-
 import { Icon } from "./Icons";
 
 const navLinks = [
@@ -25,7 +22,7 @@ const navLinks = [
   {
     name: "About Us",
     id: "about",
-    href: "/#about",
+    href: "/about",
   },
 
   {
@@ -43,7 +40,7 @@ const navLinks = [
   {
     name: "Contact Us",
     id: "contact",
-    href: "/#contact",
+    href: "/contact",
   },
 ];
 
@@ -79,12 +76,38 @@ export function Header() {
     if (pathname !== "/") {
 
       if (
-        pathname ===
-        "/departments"
+        pathname.startsWith(
+          "/departments"
+        )
       ) {
+
         setActiveSection(
           "departments"
         );
+
+      } else if (
+        pathname.startsWith(
+          "/about"
+        )
+      ) {
+
+        setActiveSection(
+          "about"
+        );
+
+      } else if (
+        pathname.startsWith(
+          "/contact"
+        )
+      ) {
+
+        setActiveSection(
+          "contact"
+        );
+
+      } else {
+
+        setActiveSection("");
       }
 
       return;
@@ -104,6 +127,12 @@ export function Header() {
           !link.id ||
           link.href.startsWith(
             "/departments"
+          ) ||
+          link.href.startsWith(
+            "/about"
+          ) ||
+          link.href.startsWith(
+            "/contact"
           )
         ) {
           continue;
@@ -131,6 +160,7 @@ export function Header() {
             sectionTop +
               sectionHeight
         ) {
+
           currentSection =
             link.id;
 
@@ -160,8 +190,34 @@ export function Header() {
 
   }, [pathname]);
 
+  useEffect(() => {
+
+    if (menuOpen) {
+
+      document.body.style.overflow =
+        "hidden";
+
+    } else {
+
+      document.body.style.overflow =
+        "auto";
+    }
+
+    return () => {
+
+      document.body.style.overflow =
+        "auto";
+    };
+
+  }, [menuOpen]);
+
   const closeMenu = () =>
     setMenuOpen(false);
+
+  const toggleMenu = () =>
+    setMenuOpen(
+      (prev) => !prev
+    );
 
   const openSearch = () => {
 
@@ -276,6 +332,13 @@ export function Header() {
   return (
     <header className="site-header">
 
+      {menuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={closeMenu}
+        />
+      )}
+
       <div className="container header-inner">
 
         <Link
@@ -300,25 +363,35 @@ export function Header() {
             }
           }}
         >
+
           <Image
             src={logo}
             alt="Prathamaa Hospital"
             priority
+            style={{
+              width: "auto",
+              height: "auto",
+            }}
           />
+
         </Link>
 
+        {/* MOBILE MENU BUTTON */}
+
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${
+            menuOpen ? "active" : ""
+          }`}
           type="button"
-          aria-label="Open navigation menu"
+          aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
-          onClick={() =>
-            setMenuOpen(true)
-          }
+          onClick={toggleMenu}
         >
+
           <span />
           <span />
           <span />
+
         </button>
 
         <button
@@ -327,14 +400,18 @@ export function Header() {
           aria-label="Open search"
           onClick={openSearch}
         >
+
           <Icon
             name="search"
             size={22}
           />
+
         </button>
 
         <nav
-          className="nav-links"
+          className={`nav-links ${
+            menuOpen ? "open" : ""
+          }`}
           aria-label="Primary navigation"
         >
 
@@ -342,14 +419,13 @@ export function Header() {
 
             const isActive =
               activeSection ===
-                link.id ||
-              (pathname ===
-                "/departments" &&
-                link.id ===
-                  "departments");
+              link.id;
 
             if (
-              pathname === "/"
+              pathname === "/" &&
+              link.href.startsWith(
+                "/#"
+              )
             ) {
 
               return (
@@ -382,6 +458,9 @@ export function Header() {
                     ? "active"
                     : ""
                 }
+                onClick={() =>
+                  closeMenu()
+                }
               >
                 {link.name}
               </Link>
@@ -396,27 +475,32 @@ export function Header() {
             className="btn btn-primary"
             href="/appointment"
           >
+
             <Icon
               name="calendar"
               size={18}
             />
 
             Book Appointment
+
           </Link>
 
           <a
             className="btn btn-outline"
             href="tel:+918009002444"
           >
+
             <Icon
               name="phone"
               size={18}
             />
 
             +91 800 900 2444
+
           </a>
 
         </div>
+
       </div>
 
       <div
@@ -433,13 +517,13 @@ export function Header() {
           onClick={closeSearch}
         />
 
-        <div
-          className="search-modal-card"
-        >
+        <div className="search-modal-card">
 
           <div className="search-modal-head">
 
-            <h2>Search</h2>
+            <h2>
+              Search
+            </h2>
 
             <button
               className="menu-close"
@@ -558,14 +642,17 @@ export function Header() {
                 <div className="search-no-results">
                   No medical information found
                 </div>
+
               )}
 
             </div>
+
           )}
 
         </div>
+
       </div>
+
     </header>
   );
 }
-
