@@ -1,125 +1,334 @@
+import Image from "next/image";
 import Link from "next/link";
 
+import founder from "@/assests/derived/doctor-karthik1.png";
+
 export default function AboutPage() {
+
   return (
-    <main className="department-detail-page">
+    <main className="modern-about-page">
 
-      <section
-        className="department-hero"
-        style={{
-          background:
-            "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/about-hospital.jpg') center/cover",
-        }}
-      >
+      {/* HERO SECTION */}
 
-        <div className="container">
+      <section className="modern-about-hero">
 
-          <h1>
-            <br></br>
-            <br></br>
-          </h1>
+        <div className="container modern-about-container">
 
-          <p className="department-subtitle">
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            
-          </p>
+          <div className="modern-about-left">
 
-        </div>
+            <span className="modern-about-badge">
+              Trusted Multi-Speciality Hospital
+            </span>
 
-      </section>
+            <h1>
+              Delivering Advanced
+              Healthcare With
+              Compassion & Excellence
+            </h1>
 
-      <section className="department-content">
+            <p className="modern-about-text">
 
-        <div className="container">
-
-          <div className="department-card">
-
-            <h2>
-              Who We Are
-            </h2>
-
-            <p>
               Prathamaa Hospital is committed to providing
-              world-class healthcare services with compassion,
-              innovation, and excellence. Our hospital combines
-              advanced medical infrastructure with highly skilled
-              doctors and dedicated healthcare professionals to
-              ensure the best treatment for every patient.
+              exceptional healthcare services through advanced
+              medical technology, experienced specialists,
+              and compassionate patient care.
+
             </p>
 
-            <p>
-              We focus on patient safety, accurate diagnosis,
-              modern treatment methods, and personalized care.
-              Our goal is to make quality healthcare accessible
-              and affordable for everyone.
+            <p className="modern-about-text">
+
+              Our hospital focuses on accurate diagnosis,
+              modern treatment methods, emergency support,
+              and personalized healthcare solutions to ensure
+              every patient receives world-class medical care.
+
             </p>
 
-            <h2>
-              Our Specialities
-            </h2>
-
-            <div className="department-list">
-
-              <div>Advanced Medical Facilities</div>
-              <div>24/7 Emergency Services</div>
-              <div>Experienced Specialists</div>
-              <div>Modern Diagnostic Labs</div>
-              <div>Patient-Centered Care</div>
-              <div>Critical Care Services</div>
-              <div>Advanced Surgical Care</div>
-              <div>Health Checkup Programs</div>
-
-            </div>
-
-            <h2>
-              Our Mission
-            </h2>
-
-            <p>
-              Our mission is to provide high-quality healthcare
-              services with integrity, compassion, and excellence.
-              We strive to improve community health through
-              advanced treatment, preventive care, and continuous
-              medical innovation.
-            </p>
-
-            <h2>
-              Why Choose Us
-            </h2>
-
-            <div className="department-list">
-
-              <div>Expert Medical Team</div>
-              <div>Modern Infrastructure</div>
-              <div>Advanced Technology</div>
-              <div>Affordable Healthcare</div>
-              <div>Friendly Environment</div>
-              <div>Emergency Support</div>
-              <div>Trusted Patient Care</div>
-              <div>Comprehensive Treatments</div>
-
-            </div>
-
-            <div className="department-buttons">
+            <div className="modern-about-actions">
 
               <Link
                 href="/appointment"
-                className="primary-btn"
+                className="modern-primary-btn"
               >
                 Book Appointment
               </Link>
 
               <Link
-                href="/"
-                className="secondary-btn"
+                href="/contact"
+                className="modern-secondary-btn"
               >
-                Back to Home
+                Contact Us
               </Link>
 
             </div>
+
+          </div>
+
+          {/* SMALL PROFESSIONAL FOUNDER CARD */}
+
+          <div className="modern-about-right">
+
+            <div className="founder-mini-card">
+
+              <Image
+                src={founder}
+                alt="Dr. Karthik Manne"
+                className="founder-mini-image"
+                priority
+              />
+
+              <div className="founder-mini-content">
+
+                <h3>
+                  Dr. Karthik Manne
+                </h3>
+
+                <p>
+                  Founder & Director
+                </p>
+
+                <span>
+                  Leading healthcare with
+                  innovation, trust, and
+                  compassionate patient care.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* STATS */}
+
+      <section className="modern-stats-section">
+
+        <div className="container">
+
+          <div className="modern-stats-grid">
+
+            <div className="modern-stat-card">
+
+              <h2>
+                10+
+              </h2>
+
+              <p>
+                Years of Excellence
+              </p>
+
+            </div>
+
+            <div className="modern-stat-card">
+
+              <h2>
+                50+
+              </h2>
+
+              <p>
+                Experienced Doctors
+              </p>
+
+            </div>
+
+            <div className="modern-stat-card">
+
+              <h2>
+                10K+
+              </h2>
+
+              <p>
+                Happy Patients
+              </p>
+
+            </div>
+
+            <div className="modern-stat-card">
+
+              <h2>
+                24/7
+              </h2>
+
+              <p>
+                Emergency Services
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* INFORMATION SECTION */}
+
+      <section className="modern-info-section">
+
+        <div className="container">
+
+          <div className="modern-section-heading">
+
+            <span>
+              About Prathamaa Hospital
+            </span>
+
+            <h2>
+              Comprehensive Healthcare
+              Designed Around Patients
+            </h2>
+
+          </div>
+
+          <div className="modern-info-grid">
+
+            <div className="modern-info-card">
+
+              <h3>
+                Who We Are
+              </h3>
+
+              <p>
+
+                Prathamaa Hospital is a modern
+                healthcare institution dedicated
+                to delivering advanced medical
+                services with compassion, precision,
+                and patient-focused care.
+
+              </p>
+
+            </div>
+
+            <div className="modern-info-card">
+
+              <h3>
+                Our Vision
+              </h3>
+
+              <p>
+
+                To become one of the most trusted
+                and innovative healthcare providers
+                by offering quality treatment,
+                advanced technology, and ethical care.
+
+              </p>
+
+            </div>
+
+            <div className="modern-info-card">
+
+              <h3>
+                Our Mission
+              </h3>
+
+              <p>
+
+                Our mission is to provide accessible,
+                affordable, and high-quality healthcare
+                services while ensuring patient safety,
+                trust, and medical excellence.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FEATURES */}
+
+      <section className="modern-features-section">
+
+        <div className="container">
+
+          <div className="modern-section-heading center">
+
+            <span>
+              Why Choose Us
+            </span>
+
+            <h2>
+              Excellence In Every
+              Step Of Healthcare
+            </h2>
+
+          </div>
+
+          <div className="modern-features-grid">
+
+            <div className="modern-feature-card">
+              Advanced Diagnostic Facilities
+            </div>
+
+            <div className="modern-feature-card">
+              Expert Medical Specialists
+            </div>
+
+            <div className="modern-feature-card">
+              Emergency & Critical Care
+            </div>
+
+            <div className="modern-feature-card">
+              Modern Medical Infrastructure
+            </div>
+
+            <div className="modern-feature-card">
+              Personalized Patient Care
+            </div>
+
+            <div className="modern-feature-card">
+              Affordable Healthcare Services
+            </div>
+
+            <div className="modern-feature-card">
+              24/7 Medical Support
+            </div>
+
+            <div className="modern-feature-card">
+              Advanced Surgical Treatments
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+
+      <section className="modern-cta-section">
+
+        <div className="container">
+
+          <div className="modern-cta-card">
+
+            <h2>
+              Your Health Is Our Priority
+            </h2>
+
+            <p>
+
+              Experience advanced healthcare,
+              trusted specialists, and compassionate
+              treatment at Prathamaa Hospital.
+
+            </p>
+
+            <Link
+              href="/appointment"
+              className="modern-primary-btn"
+            >
+              Schedule Appointment
+            </Link>
 
           </div>
 

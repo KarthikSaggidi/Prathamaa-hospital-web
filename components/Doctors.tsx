@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 
-import { useEffect, useState, } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { doctors } from "./data";
 
@@ -15,26 +19,45 @@ export function Doctors() {
     setSelectedDoctor,
   ] = useState<any>(null);
 
+  const scrollRef =
+    useRef<HTMLDivElement>(null);
+
   useEffect(() => {
 
-  if (selectedDoctor) {
+    if (selectedDoctor) {
 
-    document.body.style.overflow =
-      "hidden";
+      document.body.style.overflow =
+        "hidden";
 
-  } else {
+    } else {
 
-    document.body.style.overflow =
-      "auto";
-  }
+      document.body.style.overflow =
+        "auto";
+    }
 
-  return () => {
+    return () => {
 
-    document.body.style.overflow =
-      "auto";
+      document.body.style.overflow =
+        "auto";
+    };
+
+  }, [selectedDoctor]);
+
+  const scrollLeft = () => {
+
+    scrollRef.current?.scrollBy({
+      left: -350,
+      behavior: "smooth",
+    });
   };
 
-}, [selectedDoctor]);
+  const scrollRight = () => {
+
+    scrollRef.current?.scrollBy({
+      left: 350,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section
@@ -51,8 +74,9 @@ export function Doctors() {
         <div className="doctor-carousel">
 
           <button
-            className="round-nav"
+            className="round-nav left"
             aria-label="Previous doctor"
+            onClick={scrollLeft}
           >
             <Icon
               name="chevronLeft"
@@ -60,7 +84,10 @@ export function Doctors() {
             />
           </button>
 
-          <div className="doctor-grid">
+          <div
+            className="doctor-grid"
+            ref={scrollRef}
+          >
 
             {doctors.map(
               (doctor) => (
@@ -75,12 +102,19 @@ export function Doctors() {
                   }
                 >
 
-                  <Image
-                    src={doctor.image}
-                    alt={doctor.name}
-                    width={180}
-                    height={240}
-                  />
+                  {doctor.image && (
+  <Image
+    src={doctor.image}
+    alt={doctor.name}
+    width={180}
+    height={240}
+    style={{
+      width: "180px",
+      height: "240px",
+      objectFit: "cover",
+    }}
+  />
+)}
 
                   <div className="doctor-info">
 
@@ -131,6 +165,7 @@ export function Doctors() {
                     </button>
 
                   </div>
+
                 </article>
               )
             )}
@@ -138,8 +173,9 @@ export function Doctors() {
           </div>
 
           <button
-            className="round-nav"
+            className="round-nav right"
             aria-label="Next doctor"
+            onClick={scrollRight}
           >
             <Icon
               name="chevronRight"
@@ -148,6 +184,7 @@ export function Doctors() {
           </button>
 
         </div>
+
       </div>
 
       {selectedDoctor && (
@@ -169,17 +206,24 @@ export function Doctors() {
 
             <div className="doctor-popup-top">
 
-              <Image
-                src={
-                  selectedDoctor.image
-                }
-                alt={
-                  selectedDoctor.name
-                }
-                width={170}
-                height={220}
-                className="doctor-popup-image"
-              />
+              {selectedDoctor.image && (
+  <Image
+    src={
+      selectedDoctor.image
+    }
+    alt={
+      selectedDoctor.name
+    }
+    width={170}
+    height={220}
+    className="doctor-popup-image"
+    style={{
+      width: "170px",
+      height: "220px",
+      objectFit: "cover",
+    }}
+  />
+)}
 
               <div className="doctor-popup-header">
 
@@ -289,6 +333,7 @@ export function Doctors() {
             </button>
 
           </div>
+
         </div>
       )}
     </section>

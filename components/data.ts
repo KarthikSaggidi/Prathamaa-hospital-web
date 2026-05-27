@@ -2,6 +2,9 @@ import shivani from "@/assests/derived/doctor-shivani.png";
 import karthik from "@/assests/derived/doctor-karthik1.png";
 import kiran from "@/assests/derived/doctor-kiran1.png";
 import nirban from "@/assests/derived/doctor-nirban.png";
+import susruth from "@/assests/derived/doctor-susruth.png";
+import gopi from "@/assests/derived/doctor-gopi.png";
+import shankar from "@/assests/derived/doctor-shankar.png";
 
 export const quickStats = [
   {
@@ -141,20 +144,6 @@ export const departments = [
 
 export const doctors = [
   {
-    name: "Dr. Karthik Manne",
-
-    specialty: "Chairman & Founder",
-
-    experience: "12+ Years Experience",
-
-    rating: "4.9",
-
-    reviews: "120 Reviews",
-
-    image: karthik,
-  },
-
-  {
     name: "Dr. Shivani Manne",
 
     specialty: "Co-founder & Medical Director",
@@ -169,10 +158,10 @@ export const doctors = [
   },
 
   {
-    name: "DR. L KIRAN KUMAR (MBBS, D.CH) ",
+    name: "DR. L KIRAN KUMAR",
     
 
-    specialty: "Consultant Paediatrician &Neonatalogist (Children Specialist)",
+    specialty: "Consultant Paediatrician & Neonatalogist (Children Specialist)",
 
     experience: "15+ Years Experience",
 
@@ -188,12 +177,64 @@ export const doctors = [
 
     specialty: "Dental Implantologist",
 
+    experience: "8+ Years Experience",
+
+    rating: "4.7",
+
+    reviews: "61 Reviews",
+
+    image: nirban,
+  },
+
+
+  {
+    name: "Dr. B susruth kumar",
+
+    specialty: "Cardiologist",
+
+    experience: "5+ Years Experience",
+
+    rating: "4.5",
+
+    reviews: "56 Reviews",
+    image : susruth,
+
+    
+  },
+
+  
+
+  {
+    name: "Dr. Gopi Kishore",
+
+    specialty: "Urologist",
+
     experience: "9+ Years Experience",
 
     rating: "4.7",
 
     reviews: "66 Reviews",
+    image : gopi,
 
-    image: nirban,
+    
   },
+
+  
+
+  {
+    name: "Dr. Shankar Reddy",
+
+    specialty: "General Surgeon",
+
+    experience: "5+ Years Experience",
+
+    rating: "4.5",
+
+    reviews: "96 Reviews",
+
+    image : shankar,
+  },
+
+
+  
 ];

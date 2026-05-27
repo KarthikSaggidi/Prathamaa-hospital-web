@@ -71,13 +71,55 @@ export default function AppointmentPage() {
               </label>
 
               <label>
+
                 Preferred Doctor
+
                 <select>
-                  <option>Select Doctor</option>
-                  <option>Dr. Rajesh Kumar</option>
-                  <option>Dr. Priya Sharma</option>
-                  <option>Dr. Amit Verma</option>
+
+                  <option>
+
+                    Select Doctor
+
+                  </option>
+
+                  <option>
+
+                    Dr. Shivani Manne
+
+                  </option>
+
+                  <option>
+
+                    Dr. L Kiran Kumar
+
+                  </option>
+
+                  <option>
+
+                    Dr. Nirban Mitra
+
+                  </option>
+
+                  <option>
+
+                    Dr. Gopi Kishore
+
+                  </option>
+
+                  <option>
+
+                    Dr. B Susruth Kumar
+
+                  </option>
+
+                  <option>
+
+                    Dr. Shankar Reddy
+
+                  </option>
+
                 </select>
+
               </label>
 
               <label>
