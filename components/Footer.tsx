@@ -323,7 +323,7 @@ export function Footer() {
           <p>
             Designed & Developed
             with Care for Better
-            Healthcare Services.
+            Healthcare Services. [ by DropXcorp ]
           </p>
 
         </div>
