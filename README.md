@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prathamaa Hospital website
 
-## Getting Started
+Next.js application with hospital information, doctor profiles, departmental care pages and server-side ERP booking routes.
 
-First, run the development server:
+## Local development
+
+Use Node.js 22 or 24 and npm 10 or newer. `.nvmrc` selects Node.js 22. `package-lock.json` is the deployment lockfile; commit it whenever dependencies change.
 
 ```bash
+npm ci --include=dev --include=optional
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local address printed by Next.js, usually http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Hostinger deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy this repository as a **Node.js Web App** with the **Next.js** framework preset. The booking and callback APIs require a running Node.js application.
 
-## Learn More
+| Setting | Value |
+| --- | --- |
+| Repository branch | `main` |
+| Root directory | `./` |
+| Node.js version | `22.x` (or `24.x`) |
+| Package manager | npm |
+| Install command, if configurable | `npm ci --include=dev --include=optional` |
+| Build command | `npm run build` |
+| Build output directory | `.next` |
+| Start command, if configurable | `npm start` |
 
-To learn more about Next.js, take a look at the following resources:
+`npm run build` runs `next build --webpack`. Hostinger documents that Next.js 16.3.3 and newer require webpack on its build servers because of Turbopack/system-library compatibility. Keep this script when redeploying. See [Hostinger's Next.js build guide](https://www.hostinger.com/support/how-to-fix-next-js-16-turbopack-build-errors-on-hostinger/) and [Node.js deployment settings](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set the applicable variables from `.env.example` in Hostinger's environment-variable settings. `NEXT_PUBLIC_SITE_URL` should be `https://prathamaahospital.in`. Set the ERP callback URL and optional server-side credentials supplied by the hospital; actual secrets belong in the hosting settings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+After pushing, confirm the new commit in Hostinger's Deployments page and redeploy if automatic deployments are disabled. Deployment success must be checked in Hostinger's build and runtime logs.
 
-## Deploy on Vercel
+## Validation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run audit
+npm run lint
+npm test
+npm run build
+npm start -- --port 3011
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The existing unit-test runner and `npm run seo:check` use Bun; install Bun to run those development checks. Hostinger's install, build and start commands require only npm and Node.js. With the local production server running, `npm run seo:check` checks public pages, metadata, sitemap, images and routing without submitting patient bookings.
+
+See [the security and hosting maintenance notes](docs/security-and-hosting.md) for the dependency update details and [SEO configuration](docs/seo.md) for production metadata settings.
