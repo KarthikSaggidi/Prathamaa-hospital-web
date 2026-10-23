@@ -67,18 +67,7 @@
   box-shadow: 0 14px 35px #653e2410;
 }
 
-.portraitFrame { padding: clamp(16px, 1.8vw, 28px); border-bottom: 1px solid #f0e8e0; border-radius: 26px 26px 0 0; background: #fffaf5; }
-
-.portrait {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 560px;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 15px;
-  background: #fff;
-}
+.portraitFrame { aspect-ratio: 4 / 5; border-bottom: 1px solid #f0e8e0; border-radius: 26px 26px 0 0; overflow: hidden; }
 
 .identity { padding: clamp(23px, 2.1vw, 34px); }
 .role { display: block; margin-bottom: 10px; color: #b93f17; font-size: 11px; font-weight: 750; line-height: 1.6; letter-spacing: 1.8px; text-transform: uppercase; }
@@ -157,8 +146,7 @@
 .section .teamHeading h4 { margin: 8px 0 21px; color: var(--leadership-navy); font-family: Georgia, 'Times New Roman', serif; font-size: 27px; font-weight: 400; line-height: 1.3; }
 .teamGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 21px; }
 .teamGrid article { display: grid; grid-template-columns: 80px minmax(0, 1fr); align-items: start; gap: 14px; min-width: 0; }
-.teamPhoto { padding: 5px; border: 1px solid #eee7df; border-radius: 12px; background: #fffaf4; }
-.teamPhoto img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 7px; }
+.teamPhoto { width: 80px; height: 105px; border: 1px solid #eee7df; border-radius: 12px; overflow: hidden; }
 .teamGrid h5 { margin: 0 0 6px; color: var(--leadership-navy); font-size: 14px; font-weight: 750; line-height: 1.5; }
 .teamGrid article span { display: block; color: #b4411b; font-size: 11px; line-height: 1.7; }
 .section .teamGrid article p { margin: 8px 0 0; color: var(--leadership-muted); font-size: 12px; line-height: 1.85; }
@@ -185,7 +173,6 @@
   .section .sectionIntro { max-width: 660px; font-size: 15px; }
   .grid { grid-template-columns: minmax(0, 1fr); gap: 27px; }
   .founder { max-width: 460px; }
-  .portrait { max-height: 500px; }
   .copy { padding: 32px; }
   .section .visionTitle { font-size: 38px; }
   .desktopBreak { display: none; }
@@ -205,8 +192,7 @@
   .section .sectionIntro { font-size: 14px; line-height: 1.85; }
   .grid { gap: 22px; }
   .founder { border-radius: 21px; }
-  .portraitFrame { padding: 16px; border-radius: 21px 21px 0 0; }
-  .portrait { max-height: 460px; border-radius: 12px; }
+  .portraitFrame { border-radius: 21px 21px 0 0; }
   .identity { padding: 23px; }
   .role { font-size: 10px; letter-spacing: 1.5px; margin-bottom: 9px; }
   .section .identity h3 { font-size: clamp(27px, 7.4vw, 34px); margin-bottom: 12px; }

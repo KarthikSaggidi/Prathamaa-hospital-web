@@ -50,9 +50,8 @@ export function Hero() {
     <section className={styles.hero} aria-labelledby="home-hero-title">
       <div className={styles.artwork}>
         <div className={styles.imageFrame}>
-          <Image src="/images/home-glass-hero.png" alt="Care illustration of a doctor reassuring an elderly patient in a bright hospital" fill preload sizes="(max-width: 900px) 171vw, 100vw" className={styles.backdrop} />
+          <Image src="/images/home-hero-sharp.png" alt="Care illustration of a doctor reassuring an elderly patient in a bright hospital" fill preload quality={95} sizes="(max-width: 900px) 171vw, 100vw" className={styles.backdrop} />
         </div>
-        <div className={styles.glassFilter} aria-hidden="true" />
         <div className={styles.wash} />
       </div>
       <div className={styles.inner}>

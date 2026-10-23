@@ -2,6 +2,7 @@
 import { describe, expect, test } from "bun:test";
 import { availableDoctors, bookingPrefill, bookingRequestPayload, departmentForErp, hospitalDateTime, validateBooking, type BookingValues } from "./booking";
 import { handleBookingRequest } from "./booking-server";
+import { doctorBookingUrl, doctorProfiles } from "./doctor-profiles";
 
 const now = new Date("2030-06-15T04:30:00Z"); // 10:00 IST
 const valid: BookingValues = { fullName: "Test Patient", mobile: "+91 90000 00000", email: "", gender: "Female", department: "cardiology", doctor: "", test: "Complete Blood Count", appointmentDate: "2030-06-16", appointmentTime: "10:30", symptoms: "Consultation request" };
@@ -39,6 +40,23 @@ describe("booking validation and prefill", () => {
     expect(bookingPrefill(new URLSearchParams({ department: "cardiology", doctor: "Dr. Gopi Kishore" }))).toMatchObject({ department: "cardiology", doctor: "" });
     expect(availableDoctors("cardiology").some((doctor) => doctor.bookingName === "Dr. Gopi Kishore")).toBe(false);
     expect(bookingPrefill(new URLSearchParams({ test: "MRI Scan" })).test).toBe("MRI Scan");
+  });
+  test("every current doctor card prefills a valid consultation, including the three additions", () => {
+    for (const doctor of doctorProfiles) {
+      const link = new URL(doctorBookingUrl(doctor), "https://hospital.example");
+      const prefill = bookingPrefill(link.searchParams);
+      expect(prefill).toMatchObject({ doctor: doctor.name, department: doctor.department });
+      expect(validateBooking("appointment", { ...valid, ...prefill }, now)).toEqual({});
+    }
+    expect(availableDoctors("gynecology").map((doctor) => doctor.name)).toEqual(["Dr. Pikkalla Naveena"]);
+    expect(availableDoctors("orthopedics-sports-medicine").map((doctor) => doctor.name)).toEqual(["Dr. Batta Rakesh Yadav"]);
+    expect(availableDoctors("urology").map((doctor) => doctor.name)).toEqual(["Dr. Seshu Mohan", "Dr. Gopi Kishore"]);
+  });
+  test("preserves Shivani's previously shared link and rejects the removed doctor", () => {
+    expect(bookingPrefill(new URLSearchParams({ doctor: "Dr. Shivani Manne" }))).toMatchObject({ department: "general-laparoscopic-surgery", doctor: "Dr. D Shivani Manne" });
+    expect(bookingPrefill(new URLSearchParams({ doctor: "Dr. L Kiran Kumar" })).doctor).toBe("");
+    expect(availableDoctors("pediatrics")).toEqual([]);
+    expect(validateBooking("appointment", { ...valid, department: "pediatrics", doctor: "Dr. L Kiran Kumar" }, now).doctor).toBeDefined();
   });
 });
 

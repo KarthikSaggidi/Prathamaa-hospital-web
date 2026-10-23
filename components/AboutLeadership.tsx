@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import founder from "@/assests/derived/doctor-karthik1.png";
-import shivani from "@/assests/derived/doctor-shivani.png";
+import { doctorProfiles } from "@/lib/doctor-profiles";
+import { DoctorPortrait } from "./DoctorPortrait";
 import { Icon } from "./Icons";
 import styles from "./AboutLeadership.module.css";
 
@@ -12,6 +12,7 @@ const principles = [
   { icon: "heartOutline", title: "Stronger Communities", text: "A commitment to healthier individuals and families." },
 ];
 
+const medicalDirector = doctorProfiles.find((doctor) => doctor.role === "Medical Director")!;
 const leaders = [
   {
     name: "Dr. Karthik Manne",
@@ -20,10 +21,10 @@ const leaders = [
     description: "Leading Prathamaa Hospital with a vision to make quality healthcare accessible to every family.",
   },
   {
-    name: "Dr. Shivani Manne",
-    role: "Co-founder & Medical Director",
-    image: shivani,
-    description: "Bringing medical leadership and a commitment to compassionate, patient-centered care.",
+    name: medicalDirector.name,
+    role: medicalDirector.role,
+    image: medicalDirector.image,
+    description: medicalDirector.qualifications,
   },
 ];
 
@@ -42,11 +43,10 @@ export function AboutLeadership() {
         <div className={styles.grid}>
           <figure className={styles.founder}>
             <div className={styles.portraitFrame}>
-              <Image
-                src={founder}
-                alt="Dr. Karthik Manne, Founder and Director of Prathamaa Hospital"
+              <DoctorPortrait
+                image={founder}
+                name="Dr. Karthik Manne, Founder and Director of Prathamaa Hospital"
                 sizes="(max-width: 600px) 90vw, (max-width: 1000px) 420px, 35vw"
-                className={styles.portrait}
               />
             </div>
             <figcaption className={styles.identity}>
@@ -88,7 +88,7 @@ export function AboutLeadership() {
                 <div className={styles.teamGrid}>
                   {leaders.map((leader) => (
                     <article key={leader.name}>
-                      <div className={styles.teamPhoto}><Image src={leader.image} alt="" sizes="80px" /></div>
+                      <div className={styles.teamPhoto}><DoctorPortrait image={leader.image} name={leader.name} sizes="80px" compact /></div>
                       <div><h5>{leader.name}</h5><span>{leader.role}</span><p>{leader.description}</p></div>
                     </article>
                   ))}

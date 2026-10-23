@@ -30,7 +30,7 @@ const entries = [
       words: indexTokens(`${department.name} ${department.description} ${info.sections.flatMap((section) => section.items).join(" ")}`), titleWords: indexTokens(`${department.name} ${specialtyTerms[department.slug] ?? ""}`), normalized: clean(department.name) };
   }),
   ...doctorProfiles.map((doctor) => ({ id: doctorAnchor(doctor.sourceName), title: doctor.name.trim(), subtitle: doctor.role, type: "Doctor" as const, href: `/doctors#${doctorAnchor(doctor.sourceName)}`, icon: "doctor",
-    words: indexTokens(`${doctor.name} ${doctor.specialty} ${doctor.role} ${doctor.interests.join(" ")}`), titleWords: indexTokens(doctor.name), normalized: clean(doctor.name) })),
+    words: indexTokens(`${doctor.name} ${doctor.role} ${doctor.qualifications ?? ""} ${doctor.interests.join(" ")}`), titleWords: indexTokens(doctor.name), normalized: clean(doctor.name) })),
 ];
 
 function closeWord(a: string, b: string) {

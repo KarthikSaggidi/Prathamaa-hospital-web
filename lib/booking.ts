@@ -34,7 +34,8 @@ export function availableDoctors(department: string) {
 }
 export function bookingPrefill(params: URLSearchParams): Partial<BookingValues> {
   const requestedDepartment = departments.find((item) => item.slug === params.get("department"));
-  const doctor = doctorProfiles.find((item) => item.bookingName === params.get("doctor"));
+  const requestedDoctor = params.get("doctor") ?? "";
+  const doctor = doctorProfiles.find((item) => item.bookingName === requestedDoctor || item.bookingAliases?.includes(requestedDoctor));
   const department = requestedDepartment?.slug || doctor?.department || "";
   return { department, doctor: doctor && (!doctor.department || doctor.department === department) ? doctor.bookingName : "", test: diagnosticTests.find((item) => item.name === params.get("test"))?.name || "" };
 }

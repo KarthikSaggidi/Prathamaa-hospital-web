@@ -13,7 +13,7 @@ import { Icon } from "./Icons";
 import styles from "./DoctorDirectory.module.css";
 
 const savedStorageKey = "prathamaa-saved-doctors";
-const specialtyOrder = ["cardiology", "pediatrics", "dental-implantology", "urology", "general-laparoscopic-surgery", "leadership"];
+const specialtyOrder = ["general-laparoscopic-surgery", "gynecology", "orthopedics-sports-medicine", "urology", "cardiology", "dental-implantology"];
 const specialties = [...new Set(doctorProfiles.map((doctor) => doctor.department ?? "leadership"))].map((slug) => {
   const department = departments.find((item) => item.slug === slug);
   return { slug, name: department?.name ?? "Medical Leadership", icon: department?.icon ?? "people" };

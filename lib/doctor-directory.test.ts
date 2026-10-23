@@ -7,14 +7,24 @@ import { isNavActive, navLinks } from "./navigation";
 
 describe("doctor directory", () => {
   it("shows every existing doctor without a filter", () => {
+    assert.equal(doctorProfiles.length, 8);
     assert.deepEqual(filterDoctorProfiles(""), doctorProfiles);
     assert.deepEqual(filterDoctorProfiles("   "), doctorProfiles);
   });
 
   it("finds doctors by name, role, care area and a small spelling error", () => {
     for (const [query, name] of [
-      [" SHIVANI ", "Dr. Shivani Manne"],
-      ["neonatologist", "Dr. L Kiran Kumar"],
+      [" SHIVANI ", "Dr. D Shivani Manne"],
+      ["Medical Director", "Dr. D Shivani Manne"],
+      ["OSMANIA", "Dr. D Shivani Manne"],
+      ["Naveena", "Dr. Pikkalla Naveena"],
+      ["obstetrics", "Dr. Pikkalla Naveena"],
+      ["Rakesh Yadav", "Dr. Batta Rakesh Yadav"],
+      ["orthopedic surgeon", "Dr. Batta Rakesh Yadav"],
+      ["FIJR", "Dr. Batta Rakesh Yadav"],
+      ["Seshu Mohan", "Dr. Seshu Mohan"],
+      ["robotic", "Dr. Seshu Mohan"],
+      ["kidney transplant", "Dr. Seshu Mohan"],
       ["heart", "Dr. B Susruth Kumar"],
       ["cardiolgy", "Dr. B Susruth Kumar"],
       ["urinary", "Dr. Gopi Kishore"],
@@ -24,11 +34,34 @@ describe("doctor directory", () => {
     }
   });
 
-  it("combines search and specialty filters, including medical leadership", () => {
-    assert.deepEqual(filterDoctorProfiles("", "leadership").map((doctor) => doctor.name), ["Dr. Shivani Manne"]);
+  it("combines search and the doctors' current specialties", () => {
+    assert.deepEqual(filterDoctorProfiles("Medical Director", "general-laparoscopic-surgery").map((doctor) => doctor.name), ["Dr. D Shivani Manne"]);
+    assert.deepEqual(filterDoctorProfiles("", "gynecology").map((doctor) => doctor.name), ["Dr. Pikkalla Naveena"]);
+    assert.deepEqual(filterDoctorProfiles("", "orthopedics-sports-medicine").map((doctor) => doctor.name), ["Dr. Batta Rakesh Yadav"]);
+    assert.deepEqual(filterDoctorProfiles("", "urology").map((doctor) => doctor.name), ["Dr. Seshu Mohan", "Dr. Gopi Kishore"]);
     assert.deepEqual(filterDoctorProfiles("heart", "cardiology").map((doctor) => doctor.name), ["Dr. B Susruth Kumar"]);
     assert.deepEqual(filterDoctorProfiles("heart", "pediatrics"), []);
     assert.deepEqual(filterDoctorProfiles("zzzzunknown"), []);
+  });
+
+  it("removes the former pediatrician from search and saved profiles", () => {
+    assert.deepEqual(filterDoctorProfiles("L Kiran Kumar"), []);
+    assert.deepEqual(parseSavedDoctorIds('["doctor-dr-l-kiran-kumar"]'), []);
+    assert.ok(!doctorProfiles.some((doctor) => /kiran/i.test(doctor.name)));
+  });
+
+  it("does not add unprovided credentials or review metrics to new profiles", () => {
+    const naveena = doctorProfiles.find((doctor) => doctor.name === "Dr. Pikkalla Naveena")!;
+    const rakesh = doctorProfiles.find((doctor) => doctor.name === "Dr. Batta Rakesh Yadav")!;
+    const seshu = doctorProfiles.find((doctor) => doctor.name === "Dr. Seshu Mohan")!;
+    assert.equal(naveena.qualifications, "MD (Gynecology & Obstetrics)");
+    assert.equal(rakesh.qualifications, "MBBS, MS (Ortho), FIJR, FIAS, FISM");
+    assert.equal(seshu.qualifications, undefined);
+    for (const doctor of [naveena, rakesh, seshu]) {
+      assert.equal(doctor.experience, undefined);
+      assert.equal(doctor.rating, undefined);
+      assert.equal(doctor.reviewCount, undefined);
+    }
   });
 
   it("makes every profile discoverable with a unique directory link", () => {

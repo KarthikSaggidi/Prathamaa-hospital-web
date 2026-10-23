@@ -1,9 +1,8 @@
 .hero { position: relative; isolation: isolate; z-index: 2; height: 100vh; height: 100svh; color: #122d54; background: #f3f4f1; }
 .artwork { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
 .imageFrame { position: absolute; inset: 0; }
-.backdrop { object-fit: cover; object-position: center 38%; filter: saturate(.9) contrast(.98); }
-.glassFilter { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(125deg, #ffffff29, #fff5e912 55%, #eaf5ff1a); backdrop-filter: blur(1.6px) saturate(115%); -webkit-backdrop-filter: blur(1.6px) saturate(115%); }
-.wash { position: absolute; inset: 0; background: linear-gradient(90deg, #ffffffe6 0%, #ffffffd9 18%, #ffffffb0 32%, #ffffff26 52%, transparent 65%), linear-gradient(0deg, #e9eef16b, transparent 33%); pointer-events: none; }
+.backdrop { object-fit: cover; object-position: center 38%; }
+.wash { position: absolute; inset: 0; background: linear-gradient(90deg, #ffffffe6 0%, #ffffffd9 18%, #ffffffb0 32%, #ffffff26 52%, transparent 65%); pointer-events: none; }
 .inner { position: relative; display: grid; grid-template-rows: minmax(0,1fr) auto; gap: 18px; height: 100%; width: min(1400px, 88%); margin-inline: auto; padding: calc(var(--site-header-clearance) + 20px) 0 26px; }
 .copy { align-self: center; width: 49%; max-width: 630px; min-width: 0; padding-bottom: 5px; }
 .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; line-height: 1.7; letter-spacing: 2.7px; color: #4b6488; margin: 0 0 20px; }
@@ -64,8 +63,7 @@
   /* The two people occupy the right side of the wide desktop photograph. */
   .imageFrame { left: auto; right: 0; width: 185%; }
   .backdrop { object-position: right top; }
-  .wash { background: linear-gradient(180deg, #ffffff08, transparent 60%, #f4f8fb57); }
-  .glassFilter { backdrop-filter: blur(.6px) saturate(110%); -webkit-backdrop-filter: blur(.6px) saturate(110%); }
+  .wash { display: none; }
   .inner { display: flex; flex-direction: column; width: 92%; height: auto; padding: 0 0 25px; margin-top: 15px; gap: 18px; }
   .copy { align-self: stretch; width: 100%; max-width: none; text-align: center; padding: 23px 22px 21px; border: 1px solid #ffffffeb; border-radius: 25px; background: #ffffffa6; box-shadow: 0 8px 30px #34577908; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
   .eyebrow { justify-content: center; flex-wrap: wrap; font-size: 9px; letter-spacing: 1.8px; margin-bottom: 14px; gap: 9px; }
