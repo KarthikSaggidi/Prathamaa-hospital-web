@@ -1,0 +1,16 @@
+.row {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.row::-webkit-scrollbar-track,
+.row::-webkit-scrollbar-thumb {
+  background: transparent !important;
+  border: none !important;
+}

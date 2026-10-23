@@ -1,0 +1,101 @@
+.page { color: #193553; background: radial-gradient(ellipse at 0 45%, #fff1e76b, transparent 44%), radial-gradient(ellipse at 100% 68%, #ffe6d754, transparent 42%), #fffdfb; }
+.hero { position: relative; isolation: isolate; overflow: hidden; min-height: 450px; padding-top: var(--site-header-clearance); display: grid; place-items: center; }
+.heroImage { object-fit: cover; object-position: center; z-index: -3; }
+.heroVeil { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #ffffff2e, #ffffffd1 27%, #ffffffe6 50%, #ffffffbf 75%, #ffffff33), linear-gradient(0deg, #fff8f18c, transparent); }
+.heroContent { text-align: center; width: min(870px, 92%); padding: 33px 0 60px; }
+.eyebrow { font-size: 10px; color: #254e75; letter-spacing: 5px; font-weight: 700; }
+.hero h1 { font-size: clamp(39px, 4.15vw, 62px); line-height: 1.1; letter-spacing: -2px; font-weight: 800; margin: 22px 0 17px; color: #102c50; }
+.hero h1 > span { color: #f06a33; }
+.heroContent > p { font-size: 16px; line-height: 1.7; color: #5d7896; margin: 0; }
+.heroDetails { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 25px; color: #4b7091; font-size: 11px; }
+.heroDetails > span { display: inline-flex; align-items: center; gap: 7px; }
+.heroDetails svg { color: #ee7745; }
+.directory { position: relative; width: min(1640px, 92%); margin-inline: auto; padding: 0 0 48px; scroll-margin-top: calc(var(--site-header-clearance) + 15px); outline: 0; }
+.filterBar { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(230px, 2.25fr) minmax(175px, .95fr) minmax(175px, .95fr) auto; gap: 12px; padding: 14px; margin-top: -33px; border: 1px solid #fff; border-radius: 21px; background: #ffffffef; box-shadow: 0 12px 35px #6d412410; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.searchField, .selectField { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 53px; padding: 0 16px; border: 1px solid #e0e7ef; border-radius: 11px; background: #fff; box-shadow: inset 0 0 0 1px #f3f6f9; }
+.searchField > svg, .selectField > svg { color: #244b80; flex-shrink: 0; }
+.searchField input { width: 100%; min-width: 0; border: 0; outline: 0; padding: 15px 0; background: transparent; font-size: 13px; color: #28486d; }
+.searchField input::placeholder { color: #728aa4; opacity: 1; }
+.searchField input::-webkit-search-cancel-button { display: none; }
+.searchField > button { border: 0; background: transparent; color: #68839f; cursor: pointer; padding: 4px; font-size: 21px; }
+.searchField:focus-within, .selectField:focus-within { outline: 2px solid #f6a171; outline-offset: 3px; }
+.selectField { position: relative; padding-right: 13px; gap: 10px; }
+.selectField select { width: 100%; min-width: 0; align-self: stretch; border: 0; outline: 0; appearance: none; background: transparent; color: #29486e; font-size: 12px; font-weight: 600; padding: 10px 23px 10px 0; text-overflow: ellipsis; cursor: pointer; }
+.selectField > svg:last-child { position: absolute; right: 13px; top: calc(50% - 8px); transform: rotate(90deg); pointer-events: none; width: 15px; }
+.searchSubmit { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 23px; border: 1px solid #ff8352; border-radius: 11px; background: linear-gradient(115deg, #ff6027, #ff4814); box-shadow: 0 6px 17px #e9661f16; color: #fff; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.searchSubmit:hover { background: linear-gradient(115deg, #f45520, #ed4111); }
+.specialtyTabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0 34px; }
+.specialtyTabs button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 49px; padding: 12px 16px; border: 1px solid #fff; border-radius: 18px; background: #ffffffd9; color: #395774; font-size: 11px; font-weight: 600; box-shadow: 0 4px 20px #875b3c05; cursor: pointer; }
+.specialtyTabs svg { color: #fb7045; flex-shrink: 0; }
+.specialtyTabs button[aria-pressed="true"] { color: #e7501d; border-color: #ffddcc; background: #fff0e7b8; box-shadow: inset 0 0 0 1px #ffe7dc; }
+.specialtyTabs button:hover { border-color: #ffcfb7; background: #fff5ee; }
+.directoryTop { display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; margin-bottom: 13px; }
+.sectionEyebrow { display: inline-flex; align-items: center; gap: 11px; font-size: 10px; color: #637c96; letter-spacing: 1.7px; font-weight: 750; }
+.sectionEyebrow::before { content: ''; display: block; width: 30px; height: 2px; border-radius: 2px; background: #ff6932; flex-shrink: 0; }
+.directoryTop h2 { font-size: clamp(33px, 3.1vw, 44px); font-weight: 800; letter-spacing: -1.4px; line-height: 1.2; margin: 11px 0 5px; color: #143a58; }
+.directoryTop p { font-size: 14px; color: #6a8299; line-height: 1.8; margin: 0; }
+.viewAll { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0 10px 14px; border: 0; background: transparent; color: #f15b27; font-size: 12px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
+.resultsBar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; min-height: 28px; }
+.results { min-width: 0; overflow-wrap: anywhere; font-size: 11px; color: #72879a; line-height: 1.8; }
+.results strong { color: #3a5c7c; }
+.savedFilter { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 11px; border: 1px solid #e8edf2; border-radius: 20px; color: #5f7891; background: #ffffffa6; font-size: 10px; cursor: pointer; }
+.savedFilter > svg { color: #ed784e; }
+.savedFilter[aria-pressed="true"] { color: #d75526; border-color: #ffd4bc; background: #fff0e6; }
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 25px 20px; align-items: stretch; }
+.card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #fff; border-radius: 20px; background: linear-gradient(150deg, #fff, #fffefd); box-shadow: 0 9px 30px #78533908; overflow: hidden; scroll-margin-top: calc(var(--site-header-clearance) + 18px); transition: box-shadow .2s, transform .2s; }
+.card:hover { box-shadow: 0 14px 38px #78533912; transform: translateY(-3px); }
+.card:target { border-color: #ed9c6b; box-shadow: 0 0 0 3px #f8dcc5, 0 9px 27px #36597a09; }
+.portraitArea { position: relative; height: clamp(190px, 15.8vw, 235px); flex-shrink: 0; align-self: center; width: calc(100% - 24px); max-width: 360px; margin: 12px 0 0; }
+.portraitButton { position: relative; isolation: isolate; display: block; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 16px 16px 7px 7px; background: #fff; overflow: hidden; cursor: pointer; }
+.portraitButton::before { content: ''; position: absolute; z-index: 0; width: 92%; height: 88%; left: 4%; bottom: -5%; border-radius: 43% 57% 60% 40% / 68% 57% 43% 32%; background: #fff0eb; transform: rotate(-8deg); }
+.card[data-specialty="pediatrics"] .portraitButton::before { background: #edf6fc; }
+.card[data-specialty="dental-implantology"] .portraitButton::before { background: #fdf0f8; }
+.card[data-specialty="cardiology"] .portraitButton::before { background: #eff9f4; }
+.card[data-specialty="urology"] .portraitButton::before { background: #f1f0fd; }
+.card[data-specialty="general-laparoscopic-surgery"] .portraitButton::before { background: #fff5e8; }
+.portraitImage { object-fit: cover; object-position: center 5%; mix-blend-mode: multiply; z-index: 1; }
+.favorite { position: absolute; z-index: 2; right: 3px; top: 3px; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #ffe4d5; border-radius: 50%; background: #fffffff2; box-shadow: 0 3px 10px #b9642c06; color: #ff6939; cursor: pointer; }
+.favorite[aria-pressed="true"] { background: #fff0e7; border-color: #ffc3a5; }
+.favorite[aria-pressed="true"] svg { fill: #ff6939; }
+.experience { position: absolute; z-index: 2; bottom: 9px; left: 6px; display: inline-flex; align-items: center; gap: 5px; padding: 6px 8px; border: 1px solid #ffffffb8; border-radius: 16px; background: #ffffffe8; color: #5b7188; font-size: 9px; line-height: 1.4; font-weight: 600; pointer-events: none; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.experience svg { color: #e28d5d; }
+.cardBody { display: flex; flex: 1; flex-direction: column; padding: 12px 20px 19px; }
+.specialtyLabel { color: #ef703f; font-size: 9px; font-weight: 750; letter-spacing: 1.4px; line-height: 1.6; text-transform: uppercase; }
+.card h3 { margin: 7px 0 4px; font-size: 20px; line-height: 1.3; letter-spacing: -.6px; }
+.card h3 button { border: 0; padding: 0; background: transparent; color: #193c5e; font-size: inherit; font-weight: 800; text-align: left; cursor: pointer; }
+.doctorRole { min-height: 39px; color: #667f97; font-size: 12px; line-height: 1.65; margin: 0 0 10px; }
+.focusTags { display: flex; align-content: flex-start; align-items: flex-start; flex-wrap: wrap; gap: 5px; min-height: 51px; margin: 0 0 16px; }
+.focusTags > span { display: inline-block; padding: 6px 9px; border-radius: 11px; color: #5c7893; background: #f0f5f8; font-size: 10px; line-height: 1.4; }
+.cardActions { display: flex; align-items: center; justify-content: space-between; gap: 9px; margin-top: auto; }
+.cardActions > button { display: inline-flex; align-items: center; gap: 7px; padding: 11px 0; border: 0; background: transparent; color: #204e7b; font-size: 11px; font-weight: 750; cursor: pointer; white-space: nowrap; }
+.cardActions > a { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 10px 11px; border: 1px solid #ff804e; border-radius: 10px; color: #ee5821; background: #fff; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.cardActions > a:hover { background: #fff4eb; border-color: #f1642d; }
+.empty { display: flex; flex-direction: column; align-items: center; padding: 45px 25px; border: 1px dashed #eadbce; border-radius: 22px; background: #ffffffc9; text-align: center; }
+.empty > span { display: grid; place-items: center; width: 65px; height: 65px; border-radius: 50%; color: #eb8c59; background: #fff1e6; margin-bottom: 18px; }
+.empty h3 { font-size: 23px; letter-spacing: -.7px; color: #355775; margin: 0 0 12px; }
+.empty p { font-size: 13px; color: #778ca0; line-height: 1.9; max-width: 450px; margin: 0 0 20px; }
+.empty button { display: inline-flex; align-items: center; gap: 9px; padding: 13px 19px; border: 1px solid #f3c5a6; border-radius: 12px; color: #ad6b3f; background: #fff4e8; cursor: pointer; font-size: 12px; }
+.empty a { font-size: 12px; color: #527490; text-decoration: underline; margin-top: 17px; }
+.careSteps { width: min(1640px, 92%); margin: 0 auto 37px; padding: 30px 0; display: grid; grid-template-columns: .85fr 1.7fr; gap: 45px; border-top: 1px solid #eee4db; }
+.careSteps h2 { color: #3b5b73; font-size: 28px; line-height: 1.3; font-weight: 650; letter-spacing: -.8px; margin: 14px 0 0; }
+.careSteps ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; gap: 25px; }
+.careSteps li > span { display: grid; place-items: center; width: 34px; height: 34px; background: #fff6ec; border: 1px solid #efdbc6; border-radius: 50%; color: #b88761; font-size: 10px; margin-bottom: 14px; }
+.careSteps h3 { color: #44627b; font-size: 13px; margin: 0 0 9px; }
+.careSteps li p { color: #7c8fa1; font-size: 12px; line-height: 1.9; margin: 0; }
+.cta { width: min(1640px, 92%); margin: 0 auto; padding: 30px 35px; display: flex; align-items: center; justify-content: space-between; gap: 35px; border: 1px solid #fff; border-radius: 24px; background: linear-gradient(120deg, #ffffffbf, #fff3e4ab); box-shadow: 0 10px 32px #2e4f7108; }
+.cta h2 { font-size: 28px; color: #3c5a71; letter-spacing: -.8px; font-weight: 650; margin: 13px 0 10px; }
+.cta p { font-size: 12px; color: #7c8e9d; line-height: 1.85; margin: 0; max-width: 490px; }
+.cta > div:last-child { display: flex; flex-direction: column; align-items: center; gap: 15px; flex-shrink: 0; }
+.cta a { display: inline-flex; align-items: center; gap: 9px; color: #a46f49; font-size: 12px; }
+.cta a:first-child { border-radius: 11px; border: 1px solid #f0d1b5; background: #fff6e8; padding: 13px 18px; color: #ad7852; }
+.backToTeam { display: block; width: fit-content; margin: 24px auto 0; padding-bottom: 35px; color: #71869a; font-size: 11px; }
+.page a:focus-visible, .page button:focus-visible { outline: 2px solid #ef9b65; outline-offset: 4px; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (min-width: 1800px) { .cardBody { padding-inline: 23px; } .card h3 { font-size: 23px; } .doctorRole { font-size: 13px; min-height: 43px; } .specialtyLabel { font-size: 10px; } .focusTags > span { font-size: 11px; } .cardActions > button, .cardActions > a { font-size: 12px; } .cardActions > a { padding-inline: 13px; } .specialtyTabs button { font-size: 12px; padding-inline: 19px; } .searchField input { font-size: 14px; } }
+@media (max-width: 1439px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; } .portraitArea { height: 230px; } }
+@media (max-width: 1100px) { .filterBar { grid-template-columns: 1fr 1fr auto; } .searchField { grid-column: 1/-1; } .selectField { min-height: 50px; } .searchSubmit { min-height: 50px; padding-inline: 20px; } .specialtyTabs { gap: 9px; } .specialtyTabs button { font-size: 11px; padding-inline: 13px; } .careSteps { grid-template-columns: 1fr; gap: 25px; } }
+@media (max-width: 1049px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; } .portraitArea { height: 250px; } .cardBody { padding-inline: 22px; } .card h3 { font-size: 22px; } .cardActions > button, .cardActions > a { font-size: 12px; } }
+@media (max-width: 760px) { .filterBar { grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px; } .searchSubmit { grid-column: 1/-1; } .searchField { min-height: 52px; } .selectField { padding-left: 12px; } .selectField > svg:first-child { width: 18px; } .selectField select { font-size: 12px; } .specialtyTabs { margin-block: 22px 28px; } .directoryTop { align-items: flex-start; gap: 15px; flex-direction: column; } .directoryTop p { font-size: 13px; } .viewAll { padding-left: 0; } .heroContent > p { font-size: 14px; } .heroDetails { gap: 17px; font-size: 10px; } .desktopBreak { display: none; } .heroVeil { background: #ffffffd4; } .cta { padding: 25px; flex-direction: column; align-items: flex-start; gap: 25px; } .cta > div:last-child { align-items: flex-start; } }
+@media (max-width: 699px) { .grid { grid-template-columns: 1fr; gap: 20px; } .directory { width: 91%; padding-bottom: 32px; } .hero { min-height: 420px; } .heroContent { padding-block: 29px 65px; } .hero h1 { font-size: clamp(35px, 9vw, 43px); letter-spacing: -1.4px; margin-top: 20px; } .eyebrow { font-size: 9px; letter-spacing: 4px; } .filterBar { margin-top: -35px; border-radius: 18px; } .searchField { padding-inline: 12px; gap: 9px; } .searchField input, .selectField select { font-size: 16px; } .searchField input::placeholder { font-size: 11px; } .selectField select { font-weight: 500; } .selectField { gap: 7px; } .specialtyTabs { gap: 8px; } .specialtyTabs button { min-height: 43px; padding: 10px 12px; border-radius: 14px; font-size: 10px; gap: 7px; } .specialtyTabs svg { width: 20px; height: 20px; } .sectionEyebrow { font-size: 9px; } .directoryTop h2 { font-size: 35px; } .resultsBar { gap: 10px; margin-bottom: 16px; } .portraitArea { height: 260px; width: calc(100% - 28px); margin: 12px 0 0; } .cardBody { padding: 14px 22px 22px; } .card h3 { font-size: 23px; } .specialtyLabel { font-size: 10px; } .doctorRole { min-height: 0; font-size: 13px; margin-bottom: 14px; } .focusTags { min-height: 0; margin-bottom: 19px; } .focusTags > span { font-size: 11px; } .favorite { width: 37px; height: 37px; } .experience { font-size: 10px; padding: 7px 9px; } .cardActions > button, .cardActions > a { font-size: 12px; } .cardActions > a { min-height: 43px; padding-inline: 12px; } .careSteps { margin-bottom: 24px; } .careSteps ol { grid-template-columns: 1fr; gap: 22px; } .careSteps li { display: flex; gap: 15px; } .careSteps li > span { flex-shrink: 0; margin: 0; } .careSteps h3 { font-size: 14px; } .cta h2 { font-size: 26px; } }
+@media (max-width: 380px) { .filterBar { grid-template-columns: 1fr; } .searchField, .searchSubmit { grid-column: auto; } .searchField input::placeholder { font-size: 10px; } .cardBody { padding-inline: 16px; } .portraitArea { height: 230px; } .card h3 { font-size: 21px; } .cardActions { flex-wrap: wrap; } .cardActions > button { font-size: 11px; } .cardActions > a { font-size: 11px; padding-inline: 9px; } }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }

@@ -1,84 +1,21 @@
+import { AutoScrollRow } from "@/components/AutoScrollRow";
 import Link from "next/link";
-
 import { departments } from "./data";
-
 import { Icon } from "./Icons";
+import styles from "./Departments.module.css";
 
 export function Departments() {
-
   return (
-
-    <section
-      className="section compact-section"
-      id="departments"
-    >
-
-      <div className="container">
-
-        <div className="section-heading">
-
-         
-
-          <h2 className="section-title">
-            Our Departments
-          </h2>
-
-          
-
-        </div>
-
-        <div className="department-grid">
-
-          {departments.map(
-            (department) => {
-
-              return (
-
-                <Link
-                  key={department.name}
-                  href={
-                    department.slug ===
-                    "departments"
-                      ? "/departments"
-                      : `/departments/${department.slug}`
-                  }
-                  className="department-item"
-                >
-
-                  <div className="department-icon-wrapper">
-
-                    <span className="department-icon-circle">
-
-                      <Icon
-                        name={
-                          department.icon
-                        }
-                        size={42}
-                      />
-
-                    </span>
-
-                  </div>
-
-                  <strong>
-                    {department.name}
-                  </strong>
-
-                  <div className="department-hover-text">
-
-                    Learn More →
-
-                  </div>
-
-                </Link>
-              );
-            }
-          )}
-
-        </div>
-
+    <section className={styles.section} id="departments" aria-labelledby="home-departments-title">
+      <div className={styles.container}>
+        <div className={styles.heading}><span>EXPERTISE FOR EVERY STAGE OF LIFE</span><h2 id="home-departments-title">Our <em>Departments</em></h2><p>Specialized care, connected by compassion.</p></div>
+        <AutoScrollRow className={styles.track}>
+          {departments.map((department) => <Link key={department.slug} href={`/departments/${department.slug}`} className={styles.card}>
+            <span className={styles.icon}><Icon name={department.icon} size={34} strokeWidth={1.6} /></span>
+            <strong>{department.name}</strong><span className={styles.explore}>Explore specialty <Icon name="arrowRight" size={15} /></span>
+          </Link>)}
+        </AutoScrollRow>
       </div>
-
     </section>
   );
 }

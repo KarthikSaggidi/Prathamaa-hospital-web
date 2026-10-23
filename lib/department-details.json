@@ -1,0 +1,946 @@
+{
+  "anesthesia": {
+    "title": "Anesthesia",
+    "subtitle": "Safe and advanced anesthesia care for surgical, emergency, and critical procedures with expert monitoring and patient safety support.",
+    "sections": [
+      {
+        "title": "About Anesthesia Department",
+        "paragraphs": [
+          "The Anesthesia Department at Prathamaa Hospital plays a vital role in ensuring safe and painless surgical procedures for patients of all age groups. Our experienced anesthesiologists provide advanced anesthesia care before, during, and after surgery with continuous patient monitoring and expert support.",
+          "We focus on patient safety, pain management, and smooth recovery using modern anesthesia techniques and advanced monitoring equipment. Our department works closely with surgeons, critical care specialists, and nursing teams to provide complete perioperative care."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions & Procedures We Support",
+        "paragraphs": [],
+        "items": [
+          "General Surgeries",
+          "Orthopedic Procedures",
+          "Emergency Surgeries",
+          "Pediatric Surgeries",
+          "Gynecological Procedures",
+          "Critical Care Support",
+          "Pain Management",
+          "Trauma & Accident Cases",
+          "Laparoscopic Surgeries",
+          "High-Risk Surgical Cases"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "General Anesthesia",
+          "Regional Anesthesia",
+          "Spinal Anesthesia",
+          "Local Anesthesia",
+          "Postoperative Pain Care",
+          "ICU Monitoring Support",
+          "Emergency Anesthesia",
+          "Preoperative Evaluation"
+        ]
+      },
+      {
+        "title": "Advanced Patient Monitoring",
+        "paragraphs": [
+          "Our anesthesia department uses advanced monitoring systems to continuously track heart rate, oxygen levels, blood pressure, and breathing during surgical procedures. This ensures maximum patient safety and smooth anesthesia management throughout surgery.",
+          "We carefully assess every patient before surgery to determine the safest anesthesia plan based on medical history, age, and health condition. Our specialists ensure patients remain comfortable and stable during all medical procedures."
+        ],
+        "items": []
+      },
+      {
+        "title": "Pain Management & Recovery Care",
+        "paragraphs": [
+          "Effective pain management is an important part of recovery after surgery. Our department provides advanced pain relief methods to reduce discomfort and help patients recover faster after procedures.",
+          "With experienced anesthesiologists, modern equipment, and dedicated critical care support, Prathamaa Hospital delivers safe, reliable, and high-quality anesthesia services with complete patient care and safety."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "cardiology": {
+    "title": "Cardiology",
+    "subtitle": "Advanced heart care services with expert cardiologists, modern diagnostic facilities, emergency cardiac support, and comprehensive treatment for heart-related conditions.",
+    "sections": [
+      {
+        "title": "About Cardiology Department",
+        "paragraphs": [
+          "The Cardiology Department at Prathamaa Hospital provides specialized healthcare services for the diagnosis, treatment, and prevention of heart and blood vessel diseases. Our experienced cardiologists use advanced medical technologies and modern diagnostic techniques to deliver accurate and effective cardiac care.",
+          "We focus on early diagnosis, preventive cardiology, emergency heart care, and long-term management of cardiovascular conditions. Our department is committed to helping patients maintain healthy heart function and improve overall quality of life."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Chest Pain",
+          "Heart Attack",
+          "High Blood Pressure",
+          "Irregular Heartbeat",
+          "Coronary Artery Disease",
+          "Heart Failure",
+          "Heart Valve Disorders",
+          "High Cholesterol",
+          "Congenital Heart Diseases",
+          "Cardiac Emergencies"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "ECG Testing",
+          "2D Echo",
+          "Treadmill Test (TMT)",
+          "Cardiac Consultation",
+          "Blood Pressure Monitoring",
+          "Preventive Heart Checkups",
+          "Emergency Cardiac Care",
+          "Cardiac Risk Assessment"
+        ]
+      },
+      {
+        "title": "Advanced Cardiac Care",
+        "paragraphs": [
+          "Our department is equipped with advanced diagnostic facilities for accurate evaluation of heart conditions. We provide comprehensive cardiac assessments, continuous monitoring, and personalized treatment plans based on individual patient needs.",
+          "We strongly focus on preventive cardiology by helping patients manage risk factors such as hypertension, diabetes, obesity, smoking, and unhealthy lifestyles. Early intervention and regular monitoring help reduce complications and improve heart health."
+        ],
+        "items": []
+      },
+      {
+        "title": "Emergency Heart Care",
+        "paragraphs": [
+          "Prathamaa Hospital provides emergency cardiac support for patients experiencing chest pain, heart attacks, or sudden cardiac symptoms. Our medical team responds quickly with immediate evaluation, stabilization, and advanced treatment support.",
+          "With experienced cardiologists, advanced monitoring systems, and patient-centered care, Prathamaa Hospital ensures reliable, compassionate, and high-quality cardiac healthcare services for every patient."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "dental-implantology": {
+    "title": "Dental Implantology",
+    "subtitle": "Advanced dental implant treatments for restoring missing teeth, improving oral health, and creating confident, natural-looking smiles with expert dental care.",
+    "sections": [
+      {
+        "title": "About Dental Implantology Department",
+        "paragraphs": [
+          "The Dental Implantology Department at Prathamaa Hospital provides advanced dental care solutions for patients with missing or damaged teeth. Our experienced dental specialists focus on restoring oral function, appearance, and confidence using modern implant techniques and advanced dental technologies.",
+          "Dental implants are one of the most effective and long-lasting solutions for replacing missing teeth. Our department combines precision, safety, and personalized treatment planning to provide natural-looking and comfortable dental restorations for every patient."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Missing Teeth",
+          "Damaged Teeth",
+          "Tooth Loss",
+          "Jaw Bone Problems",
+          "Dental Infections",
+          "Loose Dentures",
+          "Gum Disorders",
+          "Broken Teeth",
+          "Oral Pain",
+          "Smile Restoration"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Dental Implants",
+          "Single Tooth Replacement",
+          "Full Mouth Rehabilitation",
+          "Cosmetic Dentistry",
+          "Smile Designing",
+          "Dental Consultation",
+          "Teeth Cleaning",
+          "Oral Health Checkups"
+        ]
+      },
+      {
+        "title": "Advanced Implant Procedures",
+        "paragraphs": [
+          "Our department uses modern implant technologies and high-quality dental materials to ensure safe and successful implant procedures. Dental implants are designed to function like natural teeth and provide long-term stability, comfort, and durability.",
+          "We carefully evaluate every patient’s oral health condition before planning implant treatments. Our specialists provide personalized treatment plans based on jawbone structure, dental condition, and aesthetic requirements."
+        ],
+        "items": []
+      },
+      {
+        "title": "Modern Dental Care Facilities",
+        "paragraphs": [
+          "Prathamaa Hospital is equipped with advanced dental equipment, digital imaging systems, sterilized treatment rooms, and modern implant technologies to provide safe and effective dental procedures.",
+          "With experienced implantologists, skilled dental staff, and patient-focused care, Prathamaa Hospital ensures high-quality dental treatments with comfort, precision, and excellent long-term results."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "dermatology": {
+    "title": "Dermatology",
+    "subtitle": "Advanced skin, hair, and nail care services with expert dermatologists, modern treatments, and personalized skincare solutions for all ages.",
+    "sections": [
+      {
+        "title": "About Dermatology Department",
+        "paragraphs": [
+          "The Dermatology Department at Prathamaa Hospital provides specialized care for skin, hair, and nail conditions using advanced diagnostic methods and modern treatment technologies. Our experienced dermatologists focus on improving skin health, appearance, and overall patient confidence.",
+          "We offer comprehensive dermatology services for both medical and cosmetic skin concerns. From common skin allergies and acne to advanced treatments for chronic skin diseases, our department ensures personalized and effective healthcare solutions for every patient."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Acne & Pimples",
+          "Skin Allergies",
+          "Psoriasis",
+          "Eczema",
+          "Hair Fall Problems",
+          "Fungal Infections",
+          "Skin Pigmentation",
+          "Nail Disorders",
+          "Skin Rashes",
+          "Vitiligo"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Skin Consultations",
+          "Acne Treatment",
+          "Hair Fall Treatment",
+          "Skin Allergy Care",
+          "Laser Skin Treatments",
+          "Cosmetic Dermatology",
+          "Anti-Aging Treatments",
+          "Skin Health Checkups"
+        ]
+      },
+      {
+        "title": "Advanced Skin Care Solutions",
+        "paragraphs": [
+          "Our dermatology department combines advanced medical expertise with modern skincare technologies to provide safe and effective treatments. We focus on accurate diagnosis, early treatment, and long-term skin health management for patients of all age groups.",
+          "We provide personalized skincare plans based on individual skin types and conditions. Our specialists also guide patients on preventive skincare, healthy routines, and lifestyle practices to maintain healthy and glowing skin."
+        ],
+        "items": []
+      },
+      {
+        "title": "Cosmetic & Aesthetic Dermatology",
+        "paragraphs": [
+          "In addition to medical dermatology, Prathamaa Hospital also offers cosmetic dermatology services for improving skin appearance and confidence. Our treatments are performed using safe procedures and advanced technologies under expert supervision.",
+          "With experienced dermatologists, advanced diagnostic facilities, and patient-focused care, Prathamaa Hospital ensures high-quality dermatology services with safety, precision, and comfort."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "ent": {
+    "title": "ENT",
+    "subtitle": "Specialized care for ear, nose, throat, head, and neck conditions with advanced diagnostic facilities and expert ENT specialists.",
+    "sections": [
+      {
+        "title": "About ENT Department",
+        "paragraphs": [
+          "The ENT Department at Prathamaa Hospital provides comprehensive healthcare services for disorders related to the ear, nose, throat, head, and neck. Our experienced ENT specialists use advanced diagnostic techniques and modern treatment methods to provide accurate and effective care.",
+          "We focus on early diagnosis, preventive care, and advanced treatment solutions for patients suffering from hearing problems, sinus issues, throat infections, allergies, and other ENT conditions. Our department is committed to improving patient comfort, breathing, hearing, and overall quality of life."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Ear Infections",
+          "Hearing Problems",
+          "Sinusitis",
+          "Tonsillitis",
+          "Throat Infections",
+          "Nasal Allergies",
+          "Vertigo & Dizziness",
+          "Nasal Blockage",
+          "Voice Disorders",
+          "Snoring Problems"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "ENT Consultations",
+          "Hearing Assessments",
+          "Sinus Treatment",
+          "Allergy Management",
+          "Endoscopic Procedures",
+          "Throat Examinations",
+          "Ear Cleaning Procedures",
+          "ENT Surgical Care"
+        ]
+      },
+      {
+        "title": "Advanced ENT Care",
+        "paragraphs": [
+          "Our ENT department uses advanced medical equipment and diagnostic technologies for accurate evaluation and treatment of ENT disorders. We provide personalized treatment plans based on the patient’s symptoms, medical history, and overall health condition.",
+          "We focus on providing minimally invasive procedures whenever possible to ensure faster recovery, reduced discomfort, and better treatment outcomes for patients."
+        ],
+        "items": []
+      },
+      {
+        "title": "Modern Diagnostic Facilities",
+        "paragraphs": [
+          "Prathamaa Hospital is equipped with modern ENT diagnostic facilities including hearing assessment tools, endoscopic equipment, and advanced examination systems to support effective diagnosis and treatment planning.",
+          "With experienced ENT specialists, skilled healthcare professionals, and patient-centered care, Prathamaa Hospital ensures safe, reliable, and high-quality ENT services for patients of all age groups."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "general-laparoscopic-surgery": {
+    "title": "General & Laparoscopic Surgery",
+    "subtitle": "Advanced surgical care with modern laparoscopic procedures, expert surgeons, faster recovery, and comprehensive treatment for various surgical conditions.",
+    "sections": [
+      {
+        "title": "About General Surgery Department",
+        "paragraphs": [
+          "The General & Laparoscopic Surgery Department at Prathamaa Hospital provides advanced surgical treatments using modern technologies and minimally invasive techniques. Our experienced surgeons specialize in diagnosing and treating a wide range of surgical conditions with precision, safety, and compassionate care.",
+          "We focus on delivering effective surgical solutions with minimal pain, smaller incisions, reduced hospital stay, and faster recovery. Our department is equipped with advanced operation theaters and modern surgical equipment to ensure the highest standards of patient care."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Appendicitis",
+          "Gallbladder Stones",
+          "Hernia Treatment",
+          "Piles & Fissures",
+          "Abdominal Pain",
+          "Thyroid Disorders",
+          "Breast Disorders",
+          "Gastrointestinal Problems",
+          "Trauma & Injuries",
+          "Minor & Major Surgeries"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Laparoscopic Surgery",
+          "General Surgical Procedures",
+          "Hernia Repair Surgery",
+          "Gallbladder Surgery",
+          "Appendix Surgery",
+          "Emergency Surgical Care",
+          "Post-Surgical Care",
+          "Minimally Invasive Procedures"
+        ]
+      },
+      {
+        "title": "Advanced Surgical Care",
+        "paragraphs": [
+          "Our department specializes in laparoscopic and minimally invasive surgical techniques that help patients recover faster with less discomfort and reduced complications. We ensure precise diagnosis, safe surgical procedures, and continuous monitoring throughout the treatment process.",
+          "Our surgical team works closely with anesthesiologists, nurses, and rehabilitation specialists to provide complete patient care before, during, and after surgery."
+        ],
+        "items": []
+      },
+      {
+        "title": "Modern Operation Theaters",
+        "paragraphs": [
+          "Prathamaa Hospital is equipped with advanced modular operation theaters, modern laparoscopic equipment, and high-quality monitoring systems to support safe and efficient surgeries. We maintain strict sterilization protocols and international safety standards for every procedure.",
+          "Our goal is to provide world-class surgical care with compassion, precision, and faster recovery so patients can return to their normal lives as quickly as possible."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "general-medicine": {
+    "title": "General Medicine",
+    "subtitle": "Comprehensive healthcare services focused on prevention, diagnosis, treatment, and management of acute and chronic medical conditions.",
+    "sections": [
+      {
+        "title": "About General Medicine Department",
+        "paragraphs": [
+          "The General Medicine Department at Prathamaa Hospital provides complete medical care for patients of all age groups. Our experienced physicians focus on accurate diagnosis, preventive healthcare, and effective treatment of a wide range of medical conditions. The department serves as the first point of contact for patients seeking medical attention and ensures personalized healthcare solutions for every patient.",
+          "We combine modern medical technology with compassionate care to deliver high-quality treatment for both common illnesses and complex medical conditions. Our physicians emphasize preventive healthcare, lifestyle management, and early diagnosis to improve long-term health outcomes."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Fever & Viral Infections",
+          "Diabetes Management",
+          "Hypertension",
+          "Respiratory Disorders",
+          "Thyroid Disorders",
+          "Digestive Problems",
+          "Allergies & Infections",
+          "Chronic Fatigue",
+          "Kidney-Related Disorders",
+          "Lifestyle Diseases"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "General Physician Consultations",
+          "Preventive Health Checkups",
+          "Chronic Disease Management",
+          "Diabetes Care",
+          "Blood Pressure Monitoring",
+          "Health Screening Programs",
+          "Infection Treatment",
+          "Nutrition & Lifestyle Counseling"
+        ]
+      },
+      {
+        "title": "Advanced Medical Care",
+        "paragraphs": [
+          "Our General Medicine Department uses advanced diagnostic tools and evidence-based treatment methods to ensure accurate diagnosis and effective care. We focus on identifying health issues early and creating customized treatment plans that meet the unique needs of every patient.",
+          "Our physicians work closely with other specialized departments whenever required to provide integrated healthcare solutions. This collaborative approach ensures comprehensive patient care, faster recovery, and improved health outcomes."
+        ],
+        "items": []
+      },
+      {
+        "title": "Preventive Healthcare & Wellness",
+        "paragraphs": [
+          "Preventive healthcare is one of the core strengths of our General Medicine Department. We encourage regular health checkups, lifestyle modifications, balanced nutrition, stress management, and early screening for chronic illnesses.",
+          "With experienced doctors, skilled healthcare professionals, modern facilities, and patient-centered care, Prathamaa Hospital is committed to delivering trusted medical services with safety, compassion, and excellence."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "gynecology": {
+    "title": "Gynecology",
+    "subtitle": "Specialized women’s healthcare services for pregnancy care, reproductive health, fertility treatments, and advanced gynecological care.",
+    "sections": [
+      {
+        "title": "About Gynecology Department",
+        "paragraphs": [
+          "The Gynecology Department at Prathamaa Hospital provides comprehensive healthcare services for women of all age groups. Our experienced gynecologists focus on preventive healthcare, reproductive wellness, pregnancy management, fertility support, and advanced gynecological treatments with compassionate care.",
+          "We understand the importance of women’s health at every stage of life. From adolescence to pregnancy and menopause, our specialists provide personalized treatment plans, modern diagnostics, and continuous medical support in a safe and comfortable environment."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Pregnancy Care",
+          "Menstrual Disorders",
+          "PCOD & PCOS",
+          "Infertility Problems",
+          "Hormonal Imbalance",
+          "Menopause Management",
+          "Uterine Disorders",
+          "Pelvic Pain",
+          "Ovarian Cysts",
+          "Gynecological Infections"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Antenatal Care",
+          "Pregnancy Scans",
+          "Normal Delivery Care",
+          "High-Risk Pregnancy Care",
+          "Women Health Checkups",
+          "Fertility Counseling",
+          "Ultrasound Services",
+          "Postnatal Care"
+        ]
+      },
+      {
+        "title": "Advanced Women Healthcare",
+        "paragraphs": [
+          "Our department is equipped with advanced medical technologies and modern facilities for accurate diagnosis and effective treatment. We provide complete maternity care, fertility guidance, minimally invasive procedures, and preventive screenings to support women’s long-term health.",
+          "With experienced gynecologists, skilled nursing staff, and patient-focused care, Prathamaa Hospital ensures safe, reliable, and high-quality healthcare services for women with dignity, privacy, and compassion."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "maxillo-facial-surgery": {
+    "title": "Maxillo Facial Surgery",
+    "subtitle": "Advanced surgical care for facial trauma, jaw correction, oral diseases, facial reconstruction, and cosmetic facial procedures with precision and expertise.",
+    "sections": [
+      {
+        "title": "About Maxillo Facial Surgery Department",
+        "paragraphs": [
+          "The Maxillo Facial Surgery Department at Prathamaa Hospital specializes in the diagnosis, surgical treatment, and reconstruction of diseases, injuries, and defects involving the face, jaw, mouth, and neck region. Our department combines advanced surgical techniques with modern medical technology to provide safe, effective, and personalized care for every patient.",
+          "Our experienced maxillofacial surgeons are trained in handling complex facial trauma, jaw deformities, oral infections, facial tumors, dental-related surgeries, and reconstructive procedures. We focus on restoring both function and appearance while ensuring patient comfort, safety, and faster recovery."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Facial Trauma & Injuries",
+          "Jaw Fractures",
+          "Wisdom Tooth Problems",
+          "Facial Deformities",
+          "Oral Infections",
+          "TM Joint Disorders",
+          "Facial Swelling",
+          "Oral Tumors & Cysts",
+          "Jaw Alignment Problems",
+          "Congenital Facial Defects"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Facial Trauma Surgery",
+          "Jaw Correction Surgery",
+          "Dental Surgical Procedures",
+          "Wisdom Tooth Extraction",
+          "Facial Reconstruction",
+          "Oral Biopsy Procedures",
+          "TM Joint Treatment",
+          "Cosmetic Facial Surgery"
+        ]
+      },
+      {
+        "title": "Advanced Surgical Care",
+        "paragraphs": [
+          "Our department uses advanced imaging systems, precision surgical instruments, and modern treatment methods to ensure accurate diagnosis and successful surgical outcomes. We focus on minimally invasive procedures whenever possible to reduce pain, minimize scarring, and support faster healing.",
+          "The surgical team works closely with dental specialists, ENT experts, plastic surgeons, and anesthesiologists to provide comprehensive care for complex facial and oral conditions. Every treatment plan is carefully designed according to the individual needs of the patient."
+        ],
+        "items": []
+      },
+      {
+        "title": "Patient-Focused Recovery & Rehabilitation",
+        "paragraphs": [
+          "At Prathamaa Hospital, patient recovery and comfort are given the highest priority. Our specialists provide detailed post-surgical guidance, rehabilitation support, pain management, and follow-up care to ensure smooth healing and long-term results.",
+          "With experienced surgeons, advanced surgical facilities, modern operation theaters, and compassionate care, the Maxillo Facial Surgery Department at Prathamaa Hospital delivers trusted healthcare services focused on safety, precision, and patient satisfaction."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "nephrology": {
+    "title": "Nephrology",
+    "subtitle": "Specialized kidney care services including diagnosis, treatment, dialysis support, and management of kidney-related disorders with advanced medical expertise.",
+    "sections": [
+      {
+        "title": "About Nephrology Department",
+        "paragraphs": [
+          "The Nephrology Department at Prathamaa Hospital provides advanced medical care for patients suffering from kidney-related diseases and disorders. Our department focuses on early diagnosis, preventive care, medical treatment, and long-term management of kidney conditions using modern diagnostic and treatment facilities.",
+          "Our experienced nephrologists work closely with patients to monitor kidney health, manage chronic kidney disease, control blood pressure, and prevent complications. We provide compassionate care with a patient-centered approach to improve overall health and quality of life."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Chronic Kidney Disease",
+          "Kidney Stones",
+          "Kidney Failure",
+          "Urinary Tract Infections",
+          "High Blood Pressure",
+          "Diabetic Kidney Disease",
+          "Protein Leakage in Urine",
+          "Electrolyte Imbalance",
+          "Swelling & Fluid Retention",
+          "Acute Kidney Injury"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Kidney Function Testing",
+          "Dialysis Support",
+          "Blood Pressure Management",
+          "Diabetes Kidney Care",
+          "Urine Analysis",
+          "Electrolyte Monitoring",
+          "Diet & Lifestyle Counseling",
+          "Preventive Kidney Checkups"
+        ]
+      },
+      {
+        "title": "Advanced Kidney Care",
+        "paragraphs": [
+          "Our nephrology department uses advanced diagnostic equipment and modern medical technologies to detect kidney diseases at an early stage. We focus on providing personalized treatment plans to slow disease progression and maintain kidney health.",
+          "Patients receive comprehensive care through regular monitoring, medication management, nutritional guidance, and preventive healthcare. Our specialists are dedicated to helping patients maintain healthy kidney function and avoid long-term complications."
+        ],
+        "items": []
+      },
+      {
+        "title": "Comprehensive Patient Support",
+        "paragraphs": [
+          "At Prathamaa Hospital, we believe that proper patient education and continuous care play an important role in kidney disease management. Our healthcare team guides patients regarding healthy diet plans, fluid intake, lifestyle modifications, and medication adherence.",
+          "With skilled nephrologists, modern dialysis support, advanced laboratory facilities, and compassionate medical staff, the Nephrology Department at Prathamaa Hospital provides trusted and high-quality kidney care services focused on patient safety and wellness."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "neurology": {
+    "title": "Neurology",
+    "subtitle": "Advanced neurological care for brain, spine, nerve, and neurological disorders with expert diagnosis and modern treatment facilities.",
+    "sections": [
+      {
+        "title": "About Neurology Department",
+        "paragraphs": [
+          "The Neurology Department at Prathamaa Hospital specializes in the diagnosis, treatment, and management of disorders affecting the brain, spinal cord, nerves, and muscles. Our department provides advanced neurological care using modern medical technologies, accurate diagnostic procedures, and evidence-based treatment methods.",
+          "Our experienced neurologists are dedicated to treating a wide range of neurological conditions with personalized care plans. We focus on early diagnosis, preventive healthcare, rehabilitation support, and long-term neurological wellness for patients of all age groups."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Stroke & Paralysis",
+          "Epilepsy & Seizures",
+          "Migraine & Headaches",
+          "Parkinson’s Disease",
+          "Neuropathy",
+          "Brain Infections",
+          "Memory Disorders",
+          "Spinal Cord Disorders",
+          "Vertigo & Dizziness",
+          "Nerve Compression Disorders"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Neurological Consultation",
+          "Stroke Management",
+          "Brain Function Evaluation",
+          "Headache Treatment",
+          "Seizure Management",
+          "Nerve Disorder Treatment",
+          "Rehabilitation Support",
+          "Preventive Neurology Care"
+        ]
+      },
+      {
+        "title": "Advanced Neurological Care",
+        "paragraphs": [
+          "Our neurology department uses advanced diagnostic technologies and modern treatment approaches to identify neurological conditions accurately and provide effective treatment. We focus on reducing complications, improving brain and nerve function, and enhancing the quality of life for every patient.",
+          "The department works closely with radiology specialists, physiotherapists, emergency care teams, and rehabilitation experts to ensure comprehensive neurological care. Our multidisciplinary approach helps patients recover faster and manage long-term neurological conditions effectively."
+        ],
+        "items": []
+      },
+      {
+        "title": "Personalized Patient Support",
+        "paragraphs": [
+          "At Prathamaa Hospital, we understand that neurological disorders can affect both physical and emotional well-being. Our team provides compassionate care, patient education, rehabilitation guidance, and continuous medical support to help patients lead healthier and more independent lives.",
+          "With experienced neurologists, advanced diagnostic support, modern treatment facilities, and patient-focused healthcare services, the Neurology Department at Prathamaa Hospital delivers trusted and high-quality neurological care."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "orthopedics-sports-medicine": {
+    "title": "Orthopedics & Sports Medicine",
+    "subtitle": "Advanced orthopedic and sports injury care with expert specialists, modern diagnostics, rehabilitation support, and comprehensive musculoskeletal treatments.",
+    "sections": [
+      {
+        "title": "About Orthopedics & Sports Medicine Department",
+        "paragraphs": [
+          "The Orthopedics & Sports Medicine Department at Prathamaa Hospital specializes in diagnosing, treating, and managing bone, joint, muscle, ligament, and spine conditions. Our orthopedic specialists provide comprehensive care for both routine orthopedic issues and complex sports injuries.",
+          "We focus on restoring mobility, reducing pain, improving physical performance, and helping patients recover quickly through personalized treatment plans, physiotherapy support, and advanced surgical procedures."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Fractures & Bone Injuries",
+          "Sports Injuries",
+          "Joint Pain & Arthritis",
+          "Back & Spine Disorders",
+          "Ligament Tears",
+          "Knee Injuries",
+          "Shoulder Dislocation",
+          "Muscle Injuries",
+          "Osteoporosis",
+          "Orthopedic Trauma"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Joint Replacement Surgery",
+          "Sports Injury Rehabilitation",
+          "Arthroscopy Procedures",
+          "Spine Care",
+          "Physiotherapy Support",
+          "Fracture Management",
+          "Pain Management",
+          "Advanced Orthopedic Surgery"
+        ]
+      },
+      {
+        "title": "Advanced Orthopedic Care",
+        "paragraphs": [
+          "Our department combines modern orthopedic technology with evidence-based treatments to provide faster recovery and improved mobility for patients of all ages.",
+          "With experienced orthopedic surgeons, rehabilitation specialists, advanced imaging, and compassionate care, Prathamaa Hospital ensures high-quality orthopedic and sports medicine services for every patient."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "pediatrics": {
+    "title": "Pediatrics",
+    "subtitle": "Complete healthcare services for newborns, infants, children, and adolescents with compassionate pediatric care and advanced medical support.",
+    "sections": [
+      {
+        "title": "About Pediatrics Department",
+        "paragraphs": [
+          "The Pediatrics Department at Prathamaa Hospital provides comprehensive healthcare services for children from birth through adolescence. Our experienced pediatricians focus on preventive healthcare, growth monitoring, vaccinations, nutritional guidance, and treatment of childhood illnesses.",
+          "We understand that children require specialized medical attention in a friendly and comfortable environment. Our pediatric department combines modern medical facilities with compassionate care to ensure the health, safety, and well-being of every child."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Fever and Viral Infections",
+          "Respiratory Problems",
+          "Asthma and Allergies",
+          "Nutrition Deficiencies",
+          "Childhood Infections",
+          "Growth Disorders",
+          "Digestive Disorders",
+          "Skin Conditions",
+          "Vaccination Support",
+          "Newborn Health Issues"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Child Health Checkups",
+          "Vaccination Programs",
+          "Growth Monitoring",
+          "Nutrition Counseling",
+          "Newborn Care",
+          "Adolescent Healthcare",
+          "Emergency Pediatric Care",
+          "Developmental Assessments"
+        ]
+      },
+      {
+        "title": "Advanced Pediatric Care",
+        "paragraphs": [
+          "Our department is designed to create a child-friendly healthcare environment. We focus on accurate diagnosis, early treatment, and preventive healthcare to ensure children grow healthy and strong.",
+          "We provide continuous monitoring of growth, developmental milestones, and nutritional health to support the overall development of children. Our specialists work closely with parents to provide guidance regarding vaccinations, diet, hygiene, and healthy lifestyles."
+        ],
+        "items": []
+      },
+      {
+        "title": "Modern Pediatric Facilities",
+        "paragraphs": [
+          "Prathamaa Hospital is equipped with advanced pediatric diagnostic facilities, child-friendly consultation rooms, emergency care services, and experienced healthcare professionals dedicated to pediatric medicine.",
+          "With advanced medical equipment, experienced pediatricians, and compassionate nursing staff, Prathamaa Hospital ensures the best medical care for every child with safety, comfort, and personalized attention."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "plastic-surgery": {
+    "title": "Plastic Surgery",
+    "subtitle": "Advanced reconstructive and cosmetic surgical care focused on enhancing appearance, restoring function, and improving confidence with precision and safety.",
+    "sections": [
+      {
+        "title": "About Plastic Surgery Department",
+        "paragraphs": [
+          "The Plastic Surgery Department at Prathamaa Hospital provides advanced cosmetic and reconstructive surgical care using modern medical technologies and personalized treatment plans. Our department focuses on restoring appearance, improving body function, correcting deformities, and enhancing patient confidence through safe and effective procedures.",
+          "Our experienced plastic surgeons specialize in handling both cosmetic enhancement procedures and reconstructive surgeries caused by trauma, burns, birth defects, accidents, or medical conditions. We are committed to providing natural-looking results while ensuring patient safety, comfort, and satisfaction."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Facial Deformities",
+          "Burn Injuries",
+          "Scar Correction",
+          "Skin & Soft Tissue Defects",
+          "Trauma Reconstruction",
+          "Congenital Defects",
+          "Facial Injuries",
+          "Cosmetic Skin Concerns",
+          "Breast Reconstruction",
+          "Post-Surgical Reconstruction"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Cosmetic Surgery",
+          "Facial Reconstruction",
+          "Burn Care & Reconstruction",
+          "Scar Revision Surgery",
+          "Skin Grafting",
+          "Hand Surgery",
+          "Body Contouring Procedures",
+          "Post-Trauma Reconstruction"
+        ]
+      },
+      {
+        "title": "Advanced Cosmetic & Reconstructive Care",
+        "paragraphs": [
+          "Our department uses advanced surgical techniques, precision equipment, and minimally invasive procedures whenever possible to reduce recovery time, minimize scarring, and achieve better aesthetic outcomes. Every procedure is carefully planned according to the individual needs and expectations of the patient.",
+          "We focus on combining medical expertise with artistic precision to deliver natural-looking results. The department works closely with dermatologists, maxillofacial surgeons, anesthesiologists, and rehabilitation specialists to provide comprehensive treatment and recovery support."
+        ],
+        "items": []
+      },
+      {
+        "title": "Personalized Patient Care",
+        "paragraphs": [
+          "At Prathamaa Hospital, patient comfort, privacy, and safety are our highest priorities. We provide detailed consultation sessions, personalized treatment planning, and complete post-surgical care to help patients recover smoothly and confidently.",
+          "With experienced plastic surgeons, modern operation theaters, advanced reconstructive facilities, and compassionate medical support, the Plastic Surgery Department at Prathamaa Hospital delivers trusted, safe, and high-quality cosmetic and reconstructive healthcare services."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "radiology": {
+    "title": "Radiology",
+    "subtitle": "Advanced diagnostic imaging services with modern radiology technology for accurate diagnosis, early detection, and effective treatment planning.",
+    "sections": [
+      {
+        "title": "About Radiology Department",
+        "paragraphs": [
+          "The Radiology Department at Prathamaa Hospital provides advanced imaging and diagnostic services using modern medical technologies and precision equipment. Our department plays a vital role in the early detection, diagnosis, monitoring, and treatment planning of various medical conditions.",
+          "Our experienced radiologists and imaging specialists work closely with physicians and surgeons to provide accurate diagnostic reports that help in delivering effective patient care. We focus on providing safe, fast, and reliable imaging services in a comfortable and patient-friendly environment."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Diagnose",
+        "paragraphs": [],
+        "items": [
+          "Bone Fractures & Injuries",
+          "Chest & Lung Disorders",
+          "Brain & Neurological Conditions",
+          "Abdominal Disorders",
+          "Kidney & Urinary Problems",
+          "Joint & Spine Conditions",
+          "Pregnancy Monitoring",
+          "Heart & Vascular Diseases",
+          "Soft Tissue Injuries",
+          "Tumors & Cysts"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Digital X-Ray",
+          "Ultrasound Scanning",
+          "Doppler Studies",
+          "CT Scan Imaging",
+          "MRI Scanning",
+          "Pregnancy Scans",
+          "Emergency Imaging Services",
+          "Diagnostic Reporting"
+        ]
+      },
+      {
+        "title": "Advanced Diagnostic Imaging",
+        "paragraphs": [
+          "Our radiology department is equipped with advanced imaging technologies that provide high-quality diagnostic images with improved accuracy and faster results. We focus on reducing radiation exposure while maintaining excellent image clarity for precise diagnosis and treatment planning.",
+          "The department supports multiple specialties including orthopedics, cardiology, neurology, gynecology, pediatrics, and emergency medicine. Our imaging services help doctors identify medical conditions early, monitor disease progression, and guide surgical or medical treatments effectively."
+        ],
+        "items": []
+      },
+      {
+        "title": "Patient Safety & Quality Care",
+        "paragraphs": [
+          "At Prathamaa Hospital, patient safety and comfort are our top priorities. Our trained radiology professionals ensure smooth imaging procedures, proper patient guidance, and timely reporting for quicker medical decisions.",
+          "With experienced radiologists, advanced scanning equipment, modern imaging facilities, and compassionate patient support, the Radiology Department at Prathamaa Hospital delivers trusted and high-quality diagnostic healthcare services."
+        ],
+        "items": []
+      }
+    ]
+  },
+  "urology": {
+    "title": "Urology",
+    "subtitle": "Comprehensive urological care for kidney, urinary tract, bladder, and male reproductive health disorders with advanced diagnostic and surgical treatment facilities.",
+    "sections": [
+      {
+        "title": "About Urology Department",
+        "paragraphs": [
+          "The Urology Department at Prathamaa Hospital specializes in the diagnosis, treatment, and management of disorders related to the urinary tract and male reproductive system. Our department provides advanced medical and surgical care using modern technologies, minimally invasive procedures, and personalized treatment plans.",
+          "Our experienced urologists focus on providing effective treatment with patient comfort, privacy, and safety as top priorities. We offer specialized care for both men and women suffering from urinary system disorders, kidney conditions, bladder problems, and reproductive health concerns."
+        ],
+        "items": []
+      },
+      {
+        "title": "Conditions We Treat",
+        "paragraphs": [],
+        "items": [
+          "Kidney Stones",
+          "Urinary Tract Infections",
+          "Prostate Enlargement",
+          "Bladder Disorders",
+          "Kidney Infections",
+          "Urinary Incontinence",
+          "Male Infertility",
+          "Blood in Urine",
+          "Urinary Obstruction",
+          "Urological Cancers"
+        ]
+      },
+      {
+        "title": "Services Available",
+        "paragraphs": [],
+        "items": [
+          "Kidney Stone Treatment",
+          "Urological Consultation",
+          "Prostate Care",
+          "Bladder Evaluation",
+          "Minimally Invasive Surgery",
+          "Urinary Infection Treatment",
+          "Male Reproductive Care",
+          "Preventive Urology Checkups"
+        ]
+      },
+      {
+        "title": "Advanced Urological Care",
+        "paragraphs": [
+          "Our urology department uses advanced imaging systems, diagnostic equipment, and modern surgical techniques to provide accurate diagnosis and effective treatment. We focus on minimally invasive procedures whenever possible to reduce pain, minimize hospital stay, and support faster patient recovery.",
+          "The department works closely with nephrologists, radiologists, and surgical specialists to provide comprehensive and coordinated patient care. Our goal is to improve urinary health, restore normal function, and enhance the overall quality of life for every patient."
+        ],
+        "items": []
+      },
+      {
+        "title": "Patient-Centered Treatment & Recovery",
+        "paragraphs": [
+          "At Prathamaa Hospital, patient education and preventive healthcare are considered essential parts of treatment. Our specialists guide patients regarding hydration, dietary management, lifestyle modifications, and follow-up care to prevent future complications.",
+          "With experienced urologists, advanced surgical facilities, modern diagnostic support, and compassionate healthcare professionals, the Urology Department at Prathamaa Hospital delivers trusted, safe, and high-quality urological care services."
+        ],
+        "items": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+.page { position: relative; isolation: isolate; overflow: hidden; padding: 10px 0 44px; color: #0b154a; background: radial-gradient(ellipse at 0 20%, #fff3ec80, transparent 38%), radial-gradient(ellipse at 100% 40%, #fff5ed66, transparent 40%), linear-gradient(150deg, #fff, #fbfcff 70%, #fff); }
+.intro { position: relative; text-align: center; width: min(850px, 90%); margin: 0 auto; }
+.eyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 10px; color: #f65c25; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; }
+.intro .eyebrow::before, .intro .eyebrow::after { content: ''; width: 26px; height: 1px; background: #ff895e; }
+.intro h1 { margin: 11px 0 8px; font-size: clamp(32px, 3.65vw, 52px); line-height: 1.15; font-weight: 700; letter-spacing: -1.7px; color: #090f45; }
+.intro h1 > span { color: #ff602c; }
+.intro > p { margin: 0; color: #59658a; font-size: 14px; line-height: 1.75; }
+.steps { position: relative; margin: 20px auto 28px; width: min(570px, 88%); }
+.steps ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
+.steps li { position: relative; text-align: center; min-width: 0; }
+.steps li + li::before { content: ''; position: absolute; top: 17px; right: calc(50% + 26px); width: calc(100% - 52px); border-top: 2px dashed #dce2ed; }
+.steps button { position: relative; display: inline-flex; flex-direction: column; align-items: center; gap: 9px; background: transparent; border: 0; padding: 0 5px 4px; font-size: 11px; color: #677393; cursor: pointer; }
+.steps button:disabled { cursor: default; opacity: 1; }
+.steps button > span { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #d0d7e5; background: #fff; border-radius: 50%; font-size: 14px; font-weight: 600; color: #344474; box-shadow: 0 2px 9px #16295805; }
+.steps .currentStep button { color: #17235b; font-weight: 700; }
+.steps .currentStep button > span, .steps .completedStep button > span { color: #fff; border-color: #ff713e; background: linear-gradient(135deg, #ff4c17, #ff955a); box-shadow: 0 4px 12px #ff6a2b20; }
+.steps .completedStep + li::before { border-color: #ffc9b0; }
+.shell { position: relative; display: grid; grid-template-columns: 1.83fr 1fr; gap: 18px; width: min(1220px, 92%); margin: 0 auto; padding: 18px; border: 1px solid #fff; border-radius: 24px; background: #ffffffdb; box-shadow: 0 12px 45px #27375b0b; align-items: stretch; }
+.form { min-width: 0; border: 1px solid #ecf0f6; border-radius: 17px; padding: 21px 23px 16px; box-shadow: 0 5px 20px #23396104; background: #fff; }
+.formFields { border: 0; padding: 0; margin: 0; min-width: 0; }
+.formFields:disabled { opacity: .75; }
+.formSection { border-bottom: 1px solid #e6ebf3; margin-bottom: 19px; padding-bottom: 24px; scroll-margin-top: calc(var(--site-header-clearance) + 10px); }
+.sectionTitle { display: flex; align-items: center; gap: 17px; margin-bottom: 18px; }
+.roundIcon { display: inline-flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; flex-shrink: 0; border: 1px solid #ffdfd1; background: #fff0e9; color: #ff6028; }
+.orange { color: #ff5b24; background: linear-gradient(130deg, #fff1e9, #ffe9df); border-color: #ffe2d4; }
+.blue { color: #0766ef; background: linear-gradient(130deg, #edf4ff, #dfeaff); border-color: #e6eeff; }
+.green { color: #179a38; background: #eaf7e8; border-color: #e0f1df; }
+.pink { color: #ff3468; background: #ffe9ed; border-color: #ffdae3; }
+.sectionTitle h2 { font-size: 20px; line-height: 1.35; color: #10194e; margin: 0 0 4px; font-weight: 700; letter-spacing: -.5px; }
+.sectionTitle p { margin: 0; color: #6a789b; font-size: 12px; line-height: 1.6; }
+.fieldsGrid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px 25px; }
+.field { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.field > label { font-size: 12px; color: #111c4d; font-weight: 600; }
+.required { color: #f04b23; }
+.inputWrap { position: relative; display: flex; align-items: center; gap: 13px; padding: 0 14px; min-height: 47px; border: 1px solid #dce2ee; border-radius: 11px; background: #fefeff; transition: border-color .15s, box-shadow .15s; }
+.inputWrap > svg { color: #44537e; flex-shrink: 0; }
+.inputWrap input, .inputWrap select { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; padding: 13px 0; color: #25355f; font-size: 12px; min-height: 45px; color-scheme: light; }
+.inputWrap input::placeholder { color: #7d8cad; opacity: 1; }
+.inputWrap select:has(option:first-child:checked) { color: #6a7a9c; }
+.inputWrap input[readonly] { color: #7c89a1; cursor: default; }
+.inputWrap:focus-within { border-color: #ff9b6c; box-shadow: 0 0 0 3px #fff2e9; }
+.inputWrap.invalid, .notesSection textarea[aria-invalid=true] { border-color: #df6e59; }
+.fieldError { color: #b5422c; font-size: 11px; line-height: 1.5; }
+.preferenceNote { display: flex; align-items: flex-start; gap: 7px; color: #74829e; font-size: 10px; line-height: 1.7; margin: 13px 0 -6px; }
+.preferenceNote > svg { flex-shrink: 0; margin-top: 2px; }
+.notesSection { margin-bottom: 17px; padding-bottom: 0; border: 0; }
+.notesSection .sectionTitle { margin-bottom: 13px; }
+.notesSection textarea { display: block; width: 100%; min-height: 104px; border: 1px solid #dce2ee; border-radius: 11px; background: #fefeff; outline: 0; padding: 14px 16px; color: #25355f; font-size: 12px; line-height: 1.8; resize: vertical; }
+.notesSection textarea::placeholder { color: #7d8cad; opacity: 1; }
+.notesSection textarea:focus { border-color: #ff9b6c; box-shadow: 0 0 0 3px #fff2e9; }
+.characterCount { display: block; font-size: 10px; color: #8390ae; text-align: right; margin-top: 4px; }
+.submit { display: flex; align-items: center; justify-content: center; gap: 13px; min-height: 57px; width: 100%; border: 1px solid #ff763d; border-radius: 11px; background: linear-gradient(110deg, #ff4f1a, #ff7c39); color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 7px 20px #ff6a2020; }
+.submit:hover { background: linear-gradient(110deg, #f64b17, #f16c2c); }
+.submit:disabled { cursor: wait; }
+.privacy { display: flex; align-items: center; justify-content: center; gap: 9px; font-size: 10px; line-height: 1.65; margin: 13px 0 0; color: #6b7a9a; text-align: center; }
+.privacy > svg { flex-shrink: 0; }
+.sidebar { min-width: 0; border-radius: 17px; overflow: hidden; background: linear-gradient(145deg, #fff5ee, #fffbf8); display: flex; flex-direction: column; }
+.photo { position: relative; height: 350px; flex-shrink: 0; overflow: hidden; }
+.photo img { object-fit: cover; object-position: center 28%; }
+.photo.labPhoto img { object-position: center 10%; }
+.sidebarCard { position: relative; margin: -35px 9px 0; padding: 27px 15px 24px; border-radius: 23px 23px 13px 13px; background: linear-gradient(150deg, #fffefc, #fffaf7); flex: 1; }
+.sidebarCard > h2 { font-size: 21px; line-height: 1.4; letter-spacing: -.65px; margin: 0 0 23px; color: #10194e; font-weight: 700; }
+.advantages { display: grid; gap: 25px; }
+.advantages > div { display: flex; align-items: center; gap: 17px; }
+.advantages h3 { font-size: 13px; font-weight: 700; color: #142053; margin: 0 0 5px; line-height: 1.5; }
+.advantages p { color: #7684a4; font-size: 11px; line-height: 1.7; margin: 0; }
+.help { display: flex; align-items: flex-start; gap: 13px; padding: 20px 16px; margin-top: 30px; background: linear-gradient(135deg, #edf4ff, #f1f6ff); border-radius: 17px; }
+.help .roundIcon { width: 48px; height: 48px; }
+.help h3 { color: #065de2; margin: 3px 0 5px; font-size: 15px; font-weight: 700; }
+.help p { color: #697da3; font-size: 12px; line-height: 1.6; margin: 0 0 17px; }
+.help a { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #0861ec; font-weight: 700; }
+.benefits { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); width: min(1220px, 92%); margin: 22px auto 0; padding: 20px 24px; background: #ffffffed; border: 1px solid #fff; border-radius: 19px; box-shadow: 0 10px 32px #27375b09; }
+.benefits > div { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 0 15px; position: relative; }
+.benefits > div + div::before { content: ''; position: absolute; left: 0; height: 37px; width: 1px; background: #ffd3bd; }
+.benefits .roundIcon { width: 51px; height: 51px; }
+.benefits h3 { color: #172354; font-weight: 700; font-size: 12px; margin: 0 0 5px; }
+.benefits p { font-size: 10px; line-height: 1.6; color: #7987a7; margin: 0; }
+.lotusLeft, .lotusRight { position: absolute; z-index: -1; pointer-events: none; opacity: .55; width: 350px; }
+.lotusLeft { left: -185px; top: 30px; transform: rotate(30deg); }
+.lotusRight { right: -190px; top: 280px; transform: rotate(-30deg); }
+.errorMessage { border: 1px solid #f3cdbf; padding: 14px 16px; border-radius: 11px; margin-bottom: 17px; background: #fff5ef; color: #9a422c; font-size: 12px; line-height: 1.7; }
+.errorMessage strong { display: block; font-weight: 600; }
+.errorMessage p { margin: 5px 0 9px; }
+.errorMessage a { display: inline-flex; align-items: center; gap: 8px; text-decoration: underline; text-underline-offset: 3px; }
+.validationMessage { font-size: 12px; line-height: 1.7; color: #ad4731; margin: 0 0 12px; }
+.confirmation { padding: 44px 35px; background: #fff; border: 1px solid #edf0f5; border-radius: 18px; text-align: center; align-self: stretch; }
+.successIcon { display: grid; place-items: center; width: 77px; height: 77px; border-radius: 50%; color: #299354; background: #ecf9ef; margin: 0 auto 24px; border: 1px solid #d4ecd9; }
+.confirmation > .eyebrow { font-size: 9px; letter-spacing: 1px; }
+.confirmation h2 { font-size: clamp(27px, 3vw, 37px); line-height: 1.25; color: #162858; font-weight: 650; margin: 15px 0; letter-spacing: -1px; }
+.confirmation h2 > span { color: #f36c39; }
+.confirmation > p { max-width: 490px; margin: 0 auto; font-size: 14px; color: #6c7f99; line-height: 1.85; }
+.receipt { text-align: left; margin: 28px auto 22px; max-width: 490px; border: 1px solid #e7ecf2; border-radius: 15px; overflow: hidden; }
+.pending { display: flex; align-items: center; gap: 8px; color: #9b7137; background: #fff9ee; border-bottom: 1px solid #f3ead9; font-size: 11px; padding: 15px 20px; }
+.pending > span { width: 6px; height: 6px; background: #c6924c; border-radius: 50%; }
+.receipt dl { display: grid; gap: 18px; padding: 22px; margin: 0; }
+.receipt dl > div { display: grid; grid-template-columns: 1fr 1.4fr; gap: 15px; }
+.receipt dt { color: #8190a4; font-size: 12px; }
+.receipt dd { margin: 0; color: #3e5779; font-size: 13px; overflow-wrap: anywhere; }
+.confirmation > .confirmationNote { font-size: 12px; }
+.confirmationNote a { color: #e66e3e; text-decoration: underline; }
+.confirmationActions { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 28px; }
+.confirmationActions a { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border-radius: 9px; padding: 14px 24px; font-size: 13px; color: #fff; background: #f56c32; }
+.confirmationActions button { font-size: 11px; color: #75869e; border: 0; padding: 4px; background: transparent; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.page a:focus-visible, .page button:focus-visible, .confirmation:focus-visible { outline: 2px solid #ff9b6c; outline-offset: 4px; }
+.inputWrap input, .inputWrap select, .notesSection textarea { scroll-margin-top: calc(var(--site-header-clearance) + 30px); }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.spinner { width: 17px; height: 17px; border: 2px solid #ffffff55; border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (min-width: 1600px) { .page { padding-top: 20px; } .steps { margin-block: 23px 32px; } }
+@media (max-width: 1100px) { .shell { width: 94%; grid-template-columns: 1.65fr 1fr; padding: 14px; gap: 14px; } .form { padding: 20px 18px 16px; } .fieldsGrid { gap: 18px 16px; } .inputWrap { gap: 9px; padding-inline: 11px; } .sidebarCard { padding-inline: 12px; margin-inline: 6px; } .sidebarCard > h2 { font-size: 19px; } .advantages { gap: 25px; } .advantages > div { gap: 11px; } .advantages .roundIcon { width: 45px; height: 45px; } .help { padding: 17px 12px; gap: 10px; } .help .roundIcon { width: 40px; height: 40px; } .help a { font-size: 12px; gap: 7px; } .benefits { width: 94%; padding-inline: 12px; } .benefits > div { gap: 10px; padding-inline: 10px; } .benefits .roundIcon { width: 43px; height: 43px; } }
+@media (max-width: 900px) { .page { padding-top: 15px; } .shell { grid-template-columns: 1fr; width: 92%; padding: 14px; gap: 20px; } .form { padding: 24px; } .sidebar { display: grid; grid-template-columns: 1fr 1fr; } .photo { height: 100%; min-height: 390px; } .photo img { object-position: center 25%; } .sidebarCard { margin: 0; padding: 25px 23px; border-radius: 0; } .advantages { gap: 18px; } .advantages > div { gap: 14px; } .advantages .roundIcon { width: 45px; height: 45px; } .sidebarCard > h2 { font-size: 21px; margin-bottom: 20px; } .help { margin-top: 23px; } .benefits { width: 92%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 0; padding: 20px 15px; } .benefits > div { justify-content: flex-start; padding-inline: 20px; } .benefits > div:nth-child(3)::before { display: none; } .benefits .roundIcon { width: 47px; height: 47px; } }
+@media (min-width: 601px) and (max-width: 760px) { .sidebar { display: flex; } .photo { height: 350px; min-height: 0; } .photo img { object-position: center 12%; } .sidebarCard { margin: -25px 7px 0; border-radius: 21px 21px 10px 10px; } }
+@media (max-width: 600px) { .page { padding-top: 9px; padding-bottom: 30px; } .intro { width: 91%; } .intro h1 { font-size: clamp(30px, 8vw, 39px); letter-spacing: -1.2px; margin-block: 12px 9px; } .intro > p { font-size: 13px; line-height: 1.8; } .eyebrow { font-size: 9px; letter-spacing: 1.4px; } .steps { margin-block: 21px 23px; width: 95%; } .steps button { font-size: 10px; gap: 8px; } .steps button > span { width: 32px; height: 32px; font-size: 13px; } .steps li + li::before { top: 16px; } .shell { width: 94%; border-radius: 20px; padding: 9px; } .form { padding: 20px 15px 15px; border-radius: 14px; } .sectionTitle { gap: 12px; margin-bottom: 21px; } .sectionTitle h2 { font-size: 19px; } .sectionTitle p { font-size: 11px; } .roundIcon { width: 46px; height: 46px; } .fieldsGrid { grid-template-columns: 1fr; gap: 19px; } .field > label { font-size: 13px; } .inputWrap { padding-inline: 14px; gap: 12px; min-height: 51px; } .inputWrap input, .inputWrap select { font-size: 16px; min-height: 49px; padding-block: 12px; } .formSection { padding-bottom: 23px; margin-bottom: 22px; } .preferenceNote { margin-top: 16px; font-size: 11px; } .notesSection { margin-bottom: 17px; padding-bottom: 0; } .notesSection textarea { font-size: 16px; min-height: 125px; padding: 13px; } .submit { min-height: 56px; font-size: 13px; gap: 10px; } .privacy { font-size: 10px; align-items: flex-start; margin-top: 14px; } .sidebar { display: flex; } .photo { height: 310px; min-height: 0; } .photo img { object-position: center 24%; } .sidebarCard { margin: -22px 6px 0; border-radius: 20px 20px 10px 10px; padding: 24px 18px 20px; } .sidebarCard > h2 { font-size: 21px; } .advantages { gap: 22px; } .advantages h3 { font-size: 13px; } .advantages p { font-size: 12px; } .help { margin-top: 25px; padding: 19px 15px; } .help a { font-size: 14px; } .benefits { width: 94%; margin-top: 17px; gap: 20px 0; padding: 20px 9px; border-radius: 16px; } .benefits > div { gap: 9px; padding-inline: 8px; } .benefits .roundIcon { width: 37px; height: 37px; } .benefits .roundIcon svg { width: 21px; } .benefits h3 { font-size: 11px; } .benefits p { font-size: 9px; } .benefits > div + div::before { height: 32px; } .confirmation { padding: 29px 17px; } .confirmation > p { font-size: 13px; } .receipt dl { padding: 20px 16px; } .receipt dl > div { grid-template-columns: 1fr 1.1fr; gap: 12px; } }
+@media (max-width: 360px) { .intro h1 { font-size: 29px; } .sectionTitle h2 { font-size: 18px; } .benefits > div { gap: 7px; padding-inline: 4px; } .benefits .roundIcon { width: 32px; height: 32px; } .benefits h3 { font-size: 10px; } .sidebarCard > h2 { font-size: 20px; } }
+@media (prefers-reduced-motion: reduce) { .inputWrap { transition: none; } .spinner { animation: none; } }

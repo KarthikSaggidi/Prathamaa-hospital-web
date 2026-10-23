@@ -1,49 +1,27 @@
-import { About } from "@/components/About";
-
+import localFont from "next/font/local";
+import { pageMetadata } from "@/lib/seo";
+import { pages } from "@/lib/seo-pages";
+import { pageStructuredData } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
+import styles from "./Home.module.css";
 import { Departments } from "@/components/Departments";
-
-import { Doctors } from "@/components/Doctors";
-
+import { HomeInformation } from "@/components/HomeInformation";
 import { Hero } from "@/components/Hero";
 
 import { ServiceCards } from "@/components/ServiceCards";
 
+const homeFont = localFont({ src: "../public/fonts/Manrope-Variable.ttf", variable: "--font-home", weight: "200 800", display: "swap" });
+
+export const metadata = pageMetadata(pages.home);
+
 export default function Home() {
   return (
-    <main>
-
-      <section
-        id="home"
-        className="nav-section"
-      >
-        <Hero />
-      </section>
-
-      <section className="nav-section">
-        <ServiceCards />
-      </section>
-
-      <section
-        id="about"
-        className="nav-section"
-      >
-        <About />
-      </section>
-
-      <section
-        id="departments"
-        className="nav-section"
-      >
-        <Departments />
-      </section>
-
-      <section
-        id="doctors"
-        className="nav-section"
-      >
-        <Doctors />
-      </section>
-
-    </main>
+    <div id="home" className={`${styles.home} ${homeFont.variable}`}>
+      <JsonLd data={pageStructuredData(pages.home)} />
+      <Hero />
+      <ServiceCards />
+      <Departments />
+      <HomeInformation />
+    </div>
   );
 }

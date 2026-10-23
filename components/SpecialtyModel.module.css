@@ -1,0 +1,29 @@
+.wrapper { position: relative; min-height: 540px; width: 100%; isolation: isolate; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border: 1px solid #ffffffc9; border-radius: 30px; background: radial-gradient(ellipse at 45% 35%, #ffffffa8, #ffffff20 70%); overflow: hidden; }
+.topline { position: absolute; top: 22px; inset-inline: 24px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.tag { display: inline-flex; align-items: center; gap: 7px; color: #61758b; font-size: 9px; font-weight: 600; letter-spacing: 1.1px; }
+.tag > span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 4px #ffffff9c; }
+.modelNumber { color: #75869a; font-size: 10px; letter-spacing: 1px; }
+.viewport { position: absolute; inset: 45px 0 150px; z-index: 2; cursor: grab; }
+.viewport:active { cursor: grabbing; }
+.viewport canvas { display: block; width: 100%; height: 100%; }
+.viewport:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; border-radius: 24px; }
+.halo { position: absolute; top: 40px; width: min(86%, 380px); aspect-ratio: 1; border: 1px solid #ffffffd1; border-radius: 50%; background: radial-gradient(circle, var(--tint), #ffffff40 65%, transparent 70%); z-index: -1; }
+.halo::after { content: ''; position: absolute; inset: 25px; border-radius: 50%; border: 1px dashed #ffffffd1; }
+.base { position: absolute; bottom: 150px; width: 185px; height: 20px; border-radius: 50%; background: #324e6f1c; filter: blur(12px); }
+.bottom { position: relative; z-index: 3; text-align: center; padding: 16px 20px 17px; width: 100%; background: linear-gradient(0deg, #ffffffa6, #ffffff00); }
+.modelTitle strong { display: block; color: #334e68; font-size: 16px; font-weight: 600; }
+.modelTitle > span { display: block; margin-top: 5px; color: #718095; font-size: 10px; }
+.bottom > p { margin: 12px 0 10px; color: #64748b; font-size: 10px; }
+.controls { display: inline-flex; gap: 3px; padding: 4px; border-radius: 25px; background: #ffffffc9; border: 1px solid #fff; box-shadow: 0 3px 14px #34506b08; }
+.controls button { border: 0; background: transparent; border-radius: 20px; min-width: 32px; min-height: 32px; padding: 7px 10px; font-size: 11px; color: #425b75; cursor: pointer; }
+.controls button:hover { background: var(--tint); }
+.controls button:focus-visible, .credits a:focus-visible, .credits summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.credits { margin-top: 12px; font-size: 9px; color: #6f8092; }
+.credits summary { cursor: pointer; display: list-item; width: fit-content; margin-inline: auto; }
+.credits p { line-height: 1.7; margin: 10px auto 0; max-width: 380px; }
+.credits a { text-decoration: underline; text-underline-offset: 2px; }
+.fallback { position: absolute; inset: 85px 0 180px; display: grid; place-content: center; justify-items: center; gap: 18px; color: var(--accent); }
+.fallback > span { font-size: 12px; color: #64798d; }
+.fallback button { border: 1px solid #dbe4ed; background: #fff; padding: 9px 15px; border-radius: 20px; color: #425b75; font-size: 11px; cursor: pointer; }
+@media (max-width: 900px) { .wrapper { min-height: 510px; max-width: 600px; margin-inline: auto; } }
+@media (max-width: 540px) { .wrapper { min-height: 460px; border-radius: 23px; } .viewport { inset: 35px 0 150px; } .topline { top: 19px; inset-inline: 18px; } .tag { font-size: 8px; } .modelTitle strong { font-size: 15px; } .bottom > p { font-size: 9px; } }

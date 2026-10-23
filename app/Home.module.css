@@ -1,0 +1,1 @@
+.home { --home-ink: #19345c; --home-muted: #617b95; --home-accent: #ef7846; position: relative; isolation: isolate; font-family: var(--font-home), Arial, sans-serif; background: radial-gradient(ellipse at 0 42%, #fff1e5a8, transparent 36%), radial-gradient(ellipse at 100% 55%, #e1effc87, transparent 45%), linear-gradient(145deg, #f9fbfc, #eef4f8 40%, #fff7ef 80%, #f6f9fc); }

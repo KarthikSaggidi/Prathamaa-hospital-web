@@ -1,0 +1,19 @@
+.section { padding: 20px 0 43px; scroll-margin-top: calc(var(--site-header-clearance) + 10px); }
+.container { width: min(1400px, 92%); margin-inline: auto; }
+.heading { text-align: center; margin-bottom: 24px; }
+.heading > span { font-size: 9px; color: #cc754e; font-weight: 700; letter-spacing: 2px; }
+.heading h2 { color: #1a355a; font-size: clamp(29px, 2.9vw, 41px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.25; margin: 11px 0 9px; }
+.heading h2 em { font-style: normal; color: #f27641; }
+.heading p { color: #6b8099; font-size: 13px; line-height: 1.8; margin: 0; }
+.track { display: grid; grid-auto-flow: column; grid-auto-columns: min(210px, 65vw); grid-template-rows: auto; gap: 16px; align-items: stretch; overflow-x: auto; overscroll-behavior-x: contain; padding: 7px 3px 18px; width: 100%; min-width: 0; }
+.card { display: flex; flex-direction: column; align-items: center; gap: 17px; min-height: 207px; padding: 23px 17px 19px; border: 1px solid #ffffffeb; border-radius: 24px; background: linear-gradient(145deg, #ffffffd9, #f9fcff80); box-shadow: 0 7px 25px #36597a06, inset 0 1px 0 #fff; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); text-align: center; transition: border-color .2s, background .2s; }
+.icon { display: grid; place-items: center; color: #ec7948; width: 64px; height: 64px; background: linear-gradient(140deg, #fffaf6, #ffe8d9); border: 1px solid #fff; border-radius: 22px; box-shadow: 0 4px 12px #f1ba8c11; }
+.card:nth-child(3n+2) .icon { color: #498ec4; background: linear-gradient(140deg, #f6fbff, #e2effc); }
+.card:nth-child(3n+3) .icon { color: #56a68e; background: linear-gradient(140deg, #f5fffa, #e6f4eb); }
+.card strong { color: #294668; font-size: 14px; line-height: 1.5; font-weight: 750; letter-spacing: -.3px; }
+.explore { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: #8a9ab0; font-size: 10px; }
+.explore svg { color: #ec925e; }
+.card:hover { border-color: #f5c9ad; background: #ffffffed; }
+.card:focus-visible { outline: 2px solid #f49a68; outline-offset: 3px; }
+@media (max-width: 600px) { .section { padding: 13px 0 30px; } .heading { margin-bottom: 19px; } .heading > span { font-size: 8px; letter-spacing: 1.4px; } .heading h2 { font-size: 30px; margin-top: 11px; } .heading p { font-size: 12px; } .track { grid-auto-columns: 185px; gap: 13px; } .card { border-radius: 21px; min-height: 200px; } }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }

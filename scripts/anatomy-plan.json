@@ -1,0 +1,222 @@
+{
+  "heart": {
+    "parts": [
+      {
+        "names": [
+          "wall of right atrium",
+          "wall of left atrium",
+          "wall of ventricle"
+        ],
+        "color": "#b95256"
+      },
+      {
+        "names": [
+          "ascending aorta",
+          "arch of aorta"
+        ],
+        "color": "#cf7466"
+      },
+      {
+        "names": [
+          "pulmonary trunk",
+          "superior vena cava"
+        ],
+        "color": "#7895b0"
+      },
+      {
+        "names": [
+          "left coronary artery",
+          "right coronary artery"
+        ],
+        "color": "#e5b98c"
+      }
+    ]
+  },
+  "brain": {
+    "parts": [
+      {
+        "names": [
+          "brain"
+        ],
+        "relation": "partof",
+        "color": "#d3a1a1"
+      }
+    ]
+  },
+  "kidneys": {
+    "parts": [
+      {
+        "names": [
+          "kidney"
+        ],
+        "color": "#a84d4c"
+      },
+      {
+        "names": [
+          "right renal artery",
+          "left renal artery"
+        ],
+        "color": "#c66059"
+      },
+      {
+        "names": [
+          "right renal vein",
+          "left renal vein"
+        ],
+        "color": "#748da5"
+      },
+      {
+        "names": [
+          "right ureter",
+          "left ureter"
+        ],
+        "color": "#dec7a5"
+      }
+    ]
+  },
+  "urinary": {
+    "parts": [
+      {
+        "names": [
+          "kidney"
+        ],
+        "color": "#ac5652"
+      },
+      {
+        "names": [
+          "right ureter",
+          "left ureter",
+          "urinary bladder"
+        ],
+        "color": "#d7bba7"
+      }
+    ]
+  },
+  "knee": {
+    "crop": "knee",
+    "parts": [
+      {
+        "names": [
+          "right femur",
+          "right tibia",
+          "right fibula",
+          "right patella"
+        ],
+        "color": "#e9ddc6"
+      }
+    ]
+  },
+  "dental": {
+    "parts": [
+      {
+        "names": [
+          "mandible",
+          "right maxilla",
+          "left maxilla"
+        ],
+        "color": "#d7c5aa"
+      },
+      {
+        "names": [
+          "tooth"
+        ],
+        "color": "#f4eada"
+      }
+    ]
+  },
+  "face": {
+    "parts": [
+      {
+        "names": [
+          "mandible",
+          "right maxilla",
+          "left maxilla",
+          "right zygomatic bone",
+          "left zygomatic bone",
+          "frontal bone",
+          "right nasal bone",
+          "left nasal bone",
+          "sphenoid bone",
+          "right parietal bone",
+          "left parietal bone",
+          "occipital bone",
+          "right temporal bone",
+          "left temporal bone"
+        ],
+        "color": "#e1d1b7"
+      },
+      {
+        "names": [
+          "tooth"
+        ],
+        "color": "#f5ebd9"
+      }
+    ]
+  },
+  "facial-muscles": {
+    "parts": [
+      {
+        "names": [
+          "muscle of face"
+        ],
+        "color": "#b56860"
+      },
+      {
+        "names": [
+          "mandible",
+          "right maxilla",
+          "left maxilla",
+          "frontal bone",
+          "right zygomatic bone",
+          "left zygomatic bone",
+          "right nasal bone",
+          "left nasal bone"
+        ],
+        "color": "#dfcbb0"
+      },
+      {
+        "names": [
+          "skin",
+          "external ear"
+        ],
+        "color": "#c7947e",
+        "clipSide": "right"
+      }
+    ]
+  },
+  "skin": {
+    "crop": "head",
+    "parts": [
+      {
+        "names": [
+          "skin",
+          "external ear"
+        ],
+        "color": "#cb9b7f"
+      },
+      {
+        "names": [
+          "sclera"
+        ],
+        "color": "#e4ddcf"
+      },
+      {
+        "names": [
+          "iris"
+        ],
+        "color": "#655b4a"
+      }
+    ]
+  },
+  "ear": {
+    "parts": [
+      {
+        "names": [
+          "external ear"
+        ],
+        "color": "#d2a48d"
+      }
+    ],
+    "crop": "ear"
+  }
+}

@@ -1,34 +1,21 @@
 import Link from "next/link";
 import { serviceCards } from "./data";
 import { Icon } from "./Icons";
+import styles from "./ServiceCards.module.css";
 
+const tones = ["orange", "blue", "green", "rose"];
 export function ServiceCards() {
   return (
-    <section className="section services-section">
-      <div className="container">
-        <div className="service-grid">
-          {serviceCards.map((card) => (
-            <Link
-              href={card.link}
-              className="service-card"
-              key={card.title}
-            >
-              <span className="service-icon">
-                <Icon name={card.icon} size={40} />
-              </span>
-
-              <div className="service-content">
-                <h3>{card.title}</h3>
-
-                <p>{card.text}</p>
-              </div>
-
-              <span className="service-arrow">
-                <Icon name="arrowRight" size={18} />
-              </span>
-            </Link>
-          ))}
-        </div>
+    <section className={styles.section} aria-label="Hospital services">
+      <div className={styles.grid}>
+        {serviceCards.map((card, index) => {
+          const href = card.title === "Find Doctors" ? "/doctors" : card.title === "Emergency Care" ? "tel:+918009002444" : card.link;
+          return <Link href={href} className={`${styles.card} ${styles[tones[index]]}`} key={card.title}>
+            <span className={styles.icon}><Icon name={card.icon === "lab" ? "flask" : card.icon} size={33} strokeWidth={1.8} /></span>
+            <div className={styles.content}><h2>{card.title}</h2><p>{card.text}</p></div>
+            <span className={styles.arrow}><Icon name="arrowRight" size={19} /></span>
+          </Link>;
+        })}
       </div>
     </section>
   );

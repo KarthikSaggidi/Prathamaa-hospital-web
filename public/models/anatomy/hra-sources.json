@@ -1,0 +1,205 @@
+[
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-left/v1.2/assets/3d-vh-f-fallopian-tube-l.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Fallopian Tube, Female, Left",
+    "citation": "Browne, Kristen,\tand Heidi Schlehlein.\t 2024.\t\"3D Reference Organ for Fallopian Tube, Female, Left v1.2.\"\t https://doi.org/10.48539/HBM529.KBQT.896.\tAccessed June 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/fallopian-tube-female-left/v1.2#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0001-8854-5301",
+        "schema1:name": "Alison Pouch"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1980-6840",
+        "schema1:name": "Kathleen O'Neill"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-right/v1.2/assets/3d-vh-f-fallopian-tube-r.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Fallopian Tube, Female, Right",
+    "citation": "Browne, Kristen,\tand Heidi Schlehlein.\t 2024.\t\"3D Reference Organ for Fallopian Tube, Female, Right v1.2.\"\t https://doi.org/10.48539/HBM952.XJJV.857.\tAccessed June 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/fallopian-tube-female-right/v1.2#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0001-8854-5301",
+        "schema1:name": "Alison Pouch"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1980-6840",
+        "schema1:name": "Kathleen O'Neill"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-left/v1.3/assets/3d-vh-f-ovary-l.glb",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "title": "ovary-female-left (v1.3) graph data",
+    "citation": null,
+    "source": "https://lod.humanatlas.io/ref-organ/ovary-female-left/v1.3",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0001-8854-5301",
+        "schema1:name": "Alison Pouch"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1980-6840",
+        "schema1:name": "Kathleen O'Neill"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-right/v1.3/assets/3d-vh-f-ovary-r.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Ovary, Female, Right",
+    "citation": "Browne, Kristen, and Heidi Schlehlein. 2024. \"3D Reference Organ for Ovary, Female, Right v1.3.\" https://doi.org/10.48539/HBM277.TVMB.676. Accessed on December 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/ovary-female-right/v1.3#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1980-6840",
+        "schema1:name": "Kathleen O'Neill"
+      },
+      {
+        "@id": "https://orcid.org/0000-0001-8854-5301",
+        "schema1:name": "Alison Pouch"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/uterus-female/v1.2/assets/3d-vh-f-uterus.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Uterus, Female",
+    "citation": "Browne, Kristen, and Heidi Schlehlein. 2024. *3D Reference Organ for Uterus v1.1*. https://doi.org/10.48539/HBM627.VTKD.892. Accessed on June 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/uterus-female/v1.2#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1980-6840",
+        "schema1:name": "Kathleen O'Neill"
+      },
+      {
+        "@id": "https://orcid.org/0000-0001-8854-5301",
+        "schema1:name": "Alison Pouch"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/lung-female/v1.4/assets/3d-vh-f-lung.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Lung, Female",
+    "citation": "Browne, Kristen, and Heidi Schlehlein. 2024. \"3D Reference Organ for Lung, Female v1.4.\" https://doi.org/10.48539/HBM994.HXJP.575. Accessed on June 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/lung-female/v1.4#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-9185-3994",
+        "schema1:name": "Gloria Pryhuber"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      }
+    ]
+  },
+  {
+    "asset": "https://cdn.humanatlas.io/digital-objects/ref-organ/liver-female/v1.2/assets/3d-vh-f-liver.glb",
+    "license": "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))",
+    "title": "3D Reference Organ for Liver, Female",
+    "citation": "Browne, Kristen. 2024. \"3D Reference Organ for Liver, Female v1.2.\" https://doi.org/10.48539/HBM599.GZLD.639. Accessed on June 15, 2024.",
+    "source": "https://lod.humanatlas.io/ref-organ/liver-female/v1.2#raw-data",
+    "creators": [
+      {
+        "@id": "https://orcid.org/0000-0003-1824-1067",
+        "schema1:name": "Ayako Suzuki"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3321-6137",
+        "schema1:name": "Katy B\u00f6rner"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-1940-6740",
+        "schema1:name": "Anna Maria Masci"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-3333-5646",
+        "schema1:name": "Heidi Schlehlein"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4066-7531",
+        "schema1:name": "Kristen Browne"
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-4174-2786",
+        "schema1:name": "Tim Kendall"
+      }
+    ]
+  }
+]

@@ -3,656 +3,85 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import {
-  useEffect,
-  useState,
-} from "react";
-
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import logo from "@/assests/logo.jpg";
 import { Icon } from "./Icons";
-
-const navLinks = [
-  {
-    name: "Home",
-    id: "home",
-    href: "/#home",
-  },
-
-  {
-    name: "About Us",
-    id: "about",
-    href: "/about",
-  },
-
-  {
-    name: "Departments",
-    id: "departments",
-    href: "/departments",
-  },
-
-  {
-    name: "Our Doctors",
-    id: "doctors",
-    href: "/#doctors",
-  },
-
-  {
-    name: "Contact Us",
-    id: "contact",
-    href: "/contact",
-  },
-];
+import { searchHospital } from "@/lib/hospital-search";
+import { navLinks, isNavActive } from "@/lib/navigation";
+import styles from "./Header.module.css";
 
 export function Header() {
-
-  const pathname =
-    usePathname();
-
-  const [menuOpen, setMenuOpen] =
-    useState(false);
-
-  const [searchOpen, setSearchOpen] =
-    useState(false);
-
-  const [activeSection, setActiveSection] =
-    useState("home");
-
-  const [searchQuery, setSearchQuery] =
-    useState("");
-
-  const [
-    searchResults,
-    setSearchResults,
-  ] = useState<any[]>([]);
-
-  const [
-    loadingSearch,
-    setLoadingSearch,
-  ] = useState(false);
+  const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [modal, setModal] = useState<"menu" | "search" | null>(null);
+  const [query, setQuery] = useState("");
+  const results = searchHospital(query);
+  const overlaysHero = ["/", "/departments", "/doctors", "/contact", "/about"].includes(pathname) || pathname.startsWith("/departments/");
 
   useEffect(() => {
-
-    if (pathname !== "/") {
-
-      if (
-        pathname.startsWith(
-          "/departments"
-        )
-      ) {
-
-        setActiveSection(
-          "departments"
-        );
-
-      } else if (
-        pathname.startsWith(
-          "/about"
-        )
-      ) {
-
-        setActiveSection(
-          "about"
-        );
-
-      } else if (
-        pathname.startsWith(
-          "/contact"
-        )
-      ) {
-
-        setActiveSection(
-          "contact"
-        );
-
-      } else {
-
-        setActiveSection("");
-      }
-
-      return;
-    }
-
-    const handleScroll = () => {
-
-      const scrollPosition =
-        window.scrollY + 200;
-
-      let currentSection =
-        "home";
-
-      for (const link of navLinks) {
-
-        if (
-          !link.id ||
-          link.href.startsWith(
-            "/departments"
-          ) ||
-          link.href.startsWith(
-            "/about"
-          ) ||
-          link.href.startsWith(
-            "/contact"
-          )
-        ) {
-          continue;
-        }
-
-        const section =
-          document.getElementById(
-            link.id
-          );
-
-        if (!section)
-          continue;
-
-        const sectionTop =
-          section.offsetTop -
-          160;
-
-        const sectionHeight =
-          section.offsetHeight;
-
-        if (
-          scrollPosition >=
-            sectionTop &&
-          scrollPosition <
-            sectionTop +
-              sectionHeight
-        ) {
-
-          currentSection =
-            link.id;
-
-          break;
-        }
-      }
-
-      setActiveSection(
-        currentSection
-      );
-    };
-
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
-
-    handleScroll();
-
-    return () => {
-
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
-    };
-
-  }, [pathname]);
+    if (!modal) return;
+    const dialog = dialogRef.current;
+    dialog?.showModal();
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { dialog?.close(); document.body.style.overflow = previous; };
+  }, [modal]);
 
   useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1181px)");
+    const dismiss = () => { if (desktop.matches) setModal((current) => current === "menu" ? null : current); };
+    desktop.addEventListener("change", dismiss);
+    return () => desktop.removeEventListener("change", dismiss);
+  }, []);
 
-    if (menuOpen) {
-
-      document.body.style.overflow =
-        "hidden";
-
-    } else {
-
-      document.body.style.overflow =
-        "auto";
-    }
-
-    return () => {
-
-      document.body.style.overflow =
-        "auto";
-    };
-
-  }, [menuOpen]);
-
-  const closeMenu = () =>
-    setMenuOpen(false);
-
-  const toggleMenu = () =>
-    setMenuOpen(
-      (prev) => !prev
-    );
-
-  const openSearch = () => {
-
-    setMenuOpen(false);
-
-    setSearchOpen(true);
-  };
-
-  const closeSearch = () =>
-    setSearchOpen(false);
-
-  const handleSearch =
-    async (
-      value: string
-    ) => {
-
-      setSearchQuery(value);
-
-      if (
-        !value.trim()
-      ) {
-
-        setSearchResults([]);
-
-        return;
-      }
-
-      try {
-
-        setLoadingSearch(
-          true
-        );
-
-        const response =
-          await fetch(
-            `/api/search?query=${value}`
-          );
-
-        const data =
-          await response.json();
-
-        setSearchResults(
-          data
-        );
-
-      } catch (error) {
-
-        console.log(
-          "Search Error:",
-          error
-        );
-
-      } finally {
-
-        setLoadingSearch(
-          false
-        );
-      }
-    };
-
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ) => {
-
-    if (pathname !== "/") {
-      return;
-    }
-
-    e.preventDefault();
-
-    if (id === "home") {
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-      setActiveSection("home");
-
-      closeMenu();
-
-      return;
-    }
-
-    const section =
-      document.getElementById(id);
-
-    if (section) {
-
-      const navbarHeight = 110;
-
-      const sectionPosition =
-        section.getBoundingClientRect()
-          .top +
-        window.pageYOffset;
-
-      window.scrollTo({
-        top:
-          sectionPosition -
-          navbarHeight,
-
-        behavior: "smooth",
-      });
-
-      setActiveSection(id);
-
-      closeMenu();
-    }
-  };
+  function navigate(event: MouseEvent<HTMLAnchorElement>, href: string) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    setModal(null);
+    if (pathname !== "/" || href !== "/") return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+  }
 
   return (
-    <header className="site-header">
+    <>
+      {!overlaysHero && <div className={styles.spacer} aria-hidden="true" />}
+      <header ref={headerRef} className={styles.header} data-site-header>
+        <Link href="/" className={styles.brand} aria-label="Prathamaa Hospital home" onClick={() => setModal(null)}><Image src={logo} alt="Prathamaa Hospital and First Cuddle" priority sizes="(max-width: 600px) 55vw, (max-width: 1180px) 285px, (max-width: 1450px) 280px, 330px" /></Link>
+        <nav className={styles.desktopNav} aria-label="Primary navigation">{navLinks.map((link) => <Link key={link.id} href={link.href} onClick={(event) => navigate(event, link.href)} aria-current={isNavActive(pathname, link.href) ? "page" : undefined}>{link.name}</Link>)}</nav>
+        <div className={styles.desktopActions}><Link href="/appointment" className={styles.book}><Icon name="calendar" size={18} /> Book Appointment</Link><a href="tel:+918009002444" className={styles.phone}><Icon name="phone" size={18} /> +91 800 900 2444</a></div>
+        <div className={styles.mobileActions}><button type="button" aria-label="Search hospital" onClick={() => setModal("search")}><Icon name="search" size={21} /></button><button type="button" aria-label="Open navigation menu" aria-expanded={modal === "menu"} aria-controls="hospital-navigation-dialog" onClick={() => setModal("menu")}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h11" /></svg></button></div>
+      </header>
 
-      {menuOpen && (
-        <div
-          className="mobile-menu-overlay"
-          onClick={closeMenu}
-        />
-      )}
-
-      <div className="container header-inner">
-
-        <Link
-          className="brand"
-          href="/"
-          onClick={(e) => {
-
-            closeMenu();
-
-            if (pathname === "/") {
-
-              e.preventDefault();
-
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
-
-              setActiveSection(
-                "home"
-              );
-            }
-          }}
-        >
-
-          <Image
-            src={logo}
-            alt="Prathamaa Hospital"
-            priority
-            style={{
-              width: "auto",
-              height: "auto",
-            }}
-          />
-
-        </Link>
-
-        {/* MOBILE MENU BUTTON */}
-
-        <button
-          className={`menu-toggle ${
-            menuOpen ? "active" : ""
-          }`}
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-          onClick={toggleMenu}
-        >
-
-          <span />
-          <span />
-          <span />
-
-        </button>
-
-        <button
-          className="mobile-search-toggle"
-          type="button"
-          aria-label="Open search"
-          onClick={openSearch}
-        >
-
-          <Icon
-            name="search"
-            size={22}
-          />
-
-        </button>
-
-        <nav
-          className={`nav-links ${
-            menuOpen ? "open" : ""
-          }`}
-          aria-label="Primary navigation"
-        >
-
-          {navLinks.map((link) => {
-
-            const isActive =
-              activeSection ===
-              link.id;
-
-            if (
-              pathname === "/" &&
-              link.href.startsWith(
-                "/#"
-              )
-            ) {
-
-              return (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  onClick={(e) =>
-                    scrollToSection(
-                      e,
-                      link.id
-                    )
-                  }
-                  className={
-                    isActive
-                      ? "active"
-                      : ""
-                  }
-                >
-                  {link.name}
-                </a>
-              );
-            }
-
-            return (
-              <Link
-                key={link.id}
-                href={link.href}
-                className={
-                  isActive
-                    ? "active"
-                    : ""
-                }
-                onClick={() =>
-                  closeMenu()
-                }
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-
-        </nav>
-
-        <div className="header-actions">
-
-          <Link
-            className="btn btn-primary"
-            href="/appointment"
-          >
-
-            <Icon
-              name="calendar"
-              size={18}
-            />
-
-            Book Appointment
-
-          </Link>
-
-          <a
-            className="btn btn-outline"
-            href="tel:+918009002444"
-          >
-
-            <Icon
-              name="phone"
-              size={18}
-            />
-
-            +91 800 900 2444
-
-          </a>
-
+      <dialog id="hospital-navigation-dialog" ref={dialogRef} className={`${styles.dialog} ${modal === "search" ? styles.searchDialog : styles.drawer}`} aria-labelledby="navigation-dialog-title" onCancel={() => setModal(null)} onClick={(event) => {
+        if (event.target !== event.currentTarget) return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) setModal(null);
+      }}>
+        <div className={`${styles.dialogTop} ${modal === "menu" ? styles.drawerTop : ""}`}>
+          {modal === "menu" ? <><span id="navigation-dialog-title" className={styles.srOnly}>Hospital navigation</span><Link href="/" className={styles.drawerBrand} aria-label="Prathamaa Hospital home" onClick={() => setModal(null)}><Image src={logo} alt="Prathamaa Hospital and First Cuddle" sizes="250px" /></Link></> : <span id="navigation-dialog-title">Find your care</span>}
+          <button type="button" aria-label="Close dialog" onClick={() => setModal(null)}><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19" /></svg></button>
         </div>
-
-      </div>
-
-      <div
-        className={`search-modal ${
-          searchOpen ? "open" : ""
-        }`}
-        aria-hidden={!searchOpen}
-      >
-
-        <button
-          className="search-modal-backdrop"
-          type="button"
-          aria-label="Close search"
-          onClick={closeSearch}
-        />
-
-        <div className="search-modal-card">
-
-          <div className="search-modal-head">
-
-            <h2>
-              Search
-            </h2>
-
-            <button
-              className="menu-close"
-              type="button"
-              aria-label="Close search"
-              onClick={closeSearch}
-            >
-              ×
-            </button>
-
+        {modal === "menu" ? <>
+          <DrawerLotus className={styles.lotusTop} />
+          <DrawerLotus className={styles.lotusBottom} />
+          <nav className={styles.mobileNav} aria-label="Mobile navigation">{navLinks.map((link) => <Link key={link.id} href={link.href} onClick={(event) => navigate(event, link.href)} aria-current={isNavActive(pathname, link.href) ? "page" : undefined}><span className={styles.menuIcon}><Icon name={link.icon} size={27} strokeWidth={1.9} /></span><span>{link.name}</span><Icon name="chevronRight" size={20} /></Link>)}</nav>
+          <div className={styles.menuBottom}>
+            <div className={styles.drawerActions}><Link href="/appointment" className={styles.book} onClick={() => setModal(null)}><Icon name="calendar" size={24} /> Book Appointment <Icon name="chevronRight" size={20} /></Link><a href="tel:+918009002444" className={styles.menuPhone}><span><Icon name="phone" size={25} /></span><strong>+91 800 900 2444</strong><Icon name="chevronRight" size={20} /></a></div>
+            <div className={styles.socials} aria-label="Social platforms">{[{ name: "Facebook", icon: "facebook", href: "https://facebook.com" }, { name: "Instagram", icon: "instagram", href: "https://instagram.com" }, { name: "YouTube", icon: "youtube", href: "https://youtube.com" }, { name: "LinkedIn", icon: "linkedin", href: "https://linkedin.com" }].map((social) => <a href={social.href} key={social.name} aria-label={social.name} target="_blank" rel="noopener noreferrer"><Icon name={social.icon} size={21} /></a>)}</div>
           </div>
-
-          <label className="search-modal-field">
-
-            <Icon
-              name="search"
-              size={22}
-            />
-
-            <input
-              aria-label="Search doctors, departments or symptoms"
-              autoComplete="off"
-              placeholder="Search Diseases, Symptoms or Departments..."
-              value={
-                searchQuery
-              }
-              onChange={(e) =>
-                handleSearch(
-                  e.target.value
-                )
-              }
-            />
-
-          </label>
-
-          {searchQuery && (
-
-            <div className="search-results">
-
-              {loadingSearch ? (
-
-                <div className="search-loading">
-                  Searching medical information...
-                </div>
-
-              ) : searchResults.length >
-                0 ? (
-
-                searchResults.map(
-                  (
-                    item,
-                    index
-                  ) => (
-
-                    <div
-                      key={index}
-                      className="search-result-item"
-                    >
-
-                      <div className="search-result-top">
-
-                        <strong>
-                          {
-                            item.title
-                          }
-                        </strong>
-
-                        <span>
-                          {
-                            item.category
-                          }
-                        </span>
-
-                      </div>
-
-                      <h4>
-                        Department:{" "}
-                        {
-                          item.department
-                        }
-                      </h4>
-
-                      <p>
-                        <strong>
-                          Symptoms:
-                        </strong>{" "}
-                        {item.symptoms?.join(
-                          ", "
-                        )}
-                      </p>
-
-                      <p>
-                        <strong>
-                          Causes:
-                        </strong>{" "}
-                        {
-                          item.causes
-                        }
-                      </p>
-
-                      <p>
-                        <strong>
-                          Treatment:
-                        </strong>{" "}
-                        {
-                          item.treatment
-                        }
-                      </p>
-
-                    </div>
-                  )
-                )
-
-              ) : (
-
-                <div className="search-no-results">
-                  No medical information found
-                </div>
-
-              )}
-
-            </div>
-
-          )}
-
-        </div>
-
-      </div>
-
-    </header>
+        </> : <div className={styles.searchContent}>
+          <label className={styles.searchField}><Icon name="search" size={20} /><span className={styles.srOnly}>Search doctors, departments or symptoms</span><input autoFocus type="search" autoComplete="off" value={query} maxLength={120} onChange={(event) => setQuery(event.target.value)} placeholder="Doctor, department or symptom…" /></label>
+          {!query.trim() && <div className={styles.searchSuggestions}><p>Popular searches</p>{["Cardiology", "Pediatrics", "Skin", "Dr. Shivani"].map((term) => <button type="button" key={term} onClick={() => setQuery(term)}>{term} ↗</button>)}</div>}
+          <p className={styles.searchCount} role="status">{query.trim() ? `${results.length} matching results` : "Search our doctors and specialties"}</p>
+          <div className={styles.searchResults}>{results.map((result) => <Link href={result.href} key={result.id} onClick={() => setModal(null)}><span className={styles.resultIcon}><Icon name={result.icon} size={22} /></span><span><small>{result.type}</small><strong>{result.title}</strong><span>{result.subtitle}</span></span><Icon name="arrowRight" size={17} /></Link>)}</div>
+          {query.trim() && results.length === 0 && <div className={styles.empty}><p>Try a doctor’s name, a specialty, or a term such as heart or skin.</p><Link href="/contact" onClick={() => setModal(null)}>Ask our team for help →</Link></div>}
+        </div>}
+      </dialog>
+    </>
   );
+}
+
+function DrawerLotus({ className }: { className: string }) {
+  return <svg className={className} viewBox="0 0 320 300" fill="none" aria-hidden="true"><g stroke="#f9c7b1" strokeWidth="2.5"><path d="M160 276C85 205 103 95 160 20c57 75 75 185 0 256Z" fill="#fff0e7" /><path d="M160 276C55 254 10 163 17 87c87 8 150 73 143 189Z" fill="#fce2d4" /><path d="M160 276c105-22 150-113 143-189-87 8-150 73-143 189Z" fill="#fce2d4" /><path d="M160 276C72 291 13 258 2 207c66-31 124-7 158 69Z" fill="#fce5d9" /><path d="M160 276c88 15 147-18 158-69-66-31-124-7-158 69Z" fill="#fce5d9" /></g></svg>;
 }
