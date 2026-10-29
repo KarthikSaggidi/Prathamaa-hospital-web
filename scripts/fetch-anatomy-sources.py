@@ -25,7 +25,8 @@ for name,dest in [('isa_element_parts.txt','isa.tsv'),('partof_element_parts.txt
 z=zipfile.ZipFile(Remote())
 json.dump([{'name':i.filename,'size':i.file_size,'compressed':i.compress_size,'offset':i.header_offset} for i in z.infolist()],open(root/'zip-index.json','w'))
 isa=list(csv.reader(open(root/'isa.tsv'),delimiter='\t'))[1:];part=list(csv.reader(open(root/'partof.tsv'),delimiter='\t'))[1:]
-plan=json.load(open(pathlib.Path(__file__).with_name('anatomy-plan.json')))
+plan_path=pathlib.Path(sys.argv[2]) if len(sys.argv)>2 else pathlib.Path(__file__).with_name('anatomy-plan.json')
+plan=json.load(open(plan_path))
 
 needed=set()
 for model in plan.values():
@@ -37,7 +38,8 @@ for model in plan.values():
    if not matches:raise ValueError(name)
    ids+=matches
   group['ids']=sorted(set(ids));needed.update(ids)
-json.dump(plan,open(root/'resolved-plan.json','w'),indent=2)
+resolved_name='resolved-specialty-plan.json' if len(sys.argv)>2 else 'resolved-plan.json'
+json.dump(plan,open(root/resolved_name,'w'),indent=2)
 index={p['name'].split('/')[-1].removesuffix('.obj'):p for p in json.load(open(root/'zip-index.json'))}
 def fetch(id):
  dest=root/'obj'/f'{id}.obj'
@@ -53,6 +55,8 @@ def fetch(id):
  dest.write_bytes(data)
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:list(ex.map(fetch,sorted(needed)))
 print('Downloaded',len(needed),'anatomy components',flush=True)
+
+if len(sys.argv)>2:sys.exit(0)
 
 HRA_SOURCES = ['https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-left/v1.2/assets/3d-vh-f-fallopian-tube-l.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-right/v1.2/assets/3d-vh-f-fallopian-tube-r.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-left/v1.3/assets/3d-vh-f-ovary-l.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-right/v1.3/assets/3d-vh-f-ovary-r.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/uterus-female/v1.2/assets/3d-vh-f-uterus.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/lung-female/v1.4/assets/3d-vh-f-lung.glb', 'https://cdn.humanatlas.io/digital-objects/ref-organ/liver-female/v1.2/assets/3d-vh-f-liver.glb']
 for url in HRA_SOURCES:

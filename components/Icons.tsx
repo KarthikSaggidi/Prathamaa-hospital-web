@@ -27,6 +27,8 @@ export function Icon({ name, size = 28, strokeWidth = 2 }: IconProps) {
 }
 
 const paths: Record<string, React.ReactNode> = {
+  pause: <><path d="M8 5v14M16 5v14" strokeWidth="3" /></>,
+  play: <path d="m8 4 12 8-12 8V4Z" />,
   lightbulb: <><path d="M9 18h6M9.5 21h5M8 14a6 6 0 1 1 8 0c-1 .8-1 1.5-1 2H9c0-.5 0-1.2-1-2ZM12 1v1M3 4l1 1m16-1-1 1M1 10h2m18 0h2" /></>,
   heartOutline: <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />,
   arrowUp: <path d="M12 20V4M5 11l7-7 7 7" />,

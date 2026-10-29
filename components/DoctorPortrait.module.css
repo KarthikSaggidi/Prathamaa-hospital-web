@@ -6,28 +6,39 @@
   height: 100%;
   overflow: hidden;
   border-radius: inherit;
-  background: linear-gradient(145deg, #fffaf5, #fff 62%, #f5f8fc);
+  background: linear-gradient(145deg, #fffaf5, #fffefd 54%, #eef5fb);
 }
 
 .watermark {
   position: absolute;
-  inset: 0;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80%, 240px);
+  height: auto;
+  max-height: 83%;
+  object-fit: contain;
   pointer-events: none;
-  opacity: .075;
-  background: url('/images/prathamaa-hospital-symbol.png') 0 16% / 100px auto no-repeat,
-    url('/images/prathamaa-hospital-symbol.png') 100% 88% / 100px auto no-repeat;
+  opacity: .11;
 }
 
 .photo {
   position: absolute;
-  inset: 12px 24px;
+  z-index: 1;
+  inset: 16px 20px 0;
 }
 
 .image {
   object-fit: contain;
-  object-position: center;
-  border-radius: 8px;
+  object-position: center bottom;
 }
 
-.compact .photo { inset: 5px; }
-.compact .watermark { background-size: 45px auto; }
+.compact .photo { inset: 5px 4px 0; }
+.compact .watermark { width: 80%; }
+
+@media (max-width: 699px) {
+  .watermark { width: min(76%, 250px); }
+  .photo { inset: 18px 22px 0; }
+  .compact .photo { inset: 5px 4px 0; }
+}

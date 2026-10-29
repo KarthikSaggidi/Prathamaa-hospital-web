@@ -1,0 +1,68 @@
+[
+  {
+    "id": "hospital-intro",
+    "file": "hospital-intro-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 641702,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  },
+  {
+    "id": "heart-care",
+    "file": "heart-care-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 642834,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  },
+  {
+    "id": "women-children",
+    "file": "women-children-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 740536,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  },
+  {
+    "id": "orthopaedics",
+    "file": "orthopaedics-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 676930,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  },
+  {
+    "id": "preventive-care",
+    "file": "preventive-care-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 641418,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  },
+  {
+    "id": "specialty-care",
+    "file": "specialty-care-3d-4k.webp",
+    "nativeWidth": 1832,
+    "nativeHeight": 859,
+    "width": 3840,
+    "height": 1800,
+    "bytes": 627670,
+    "mode": "built-in image_gen",
+    "export": "Lanczos3 resample; WebP quality 98, smart chroma subsampling"
+  }
+]

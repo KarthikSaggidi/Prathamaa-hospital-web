@@ -53,7 +53,7 @@ export function SpecialtyModel({ slug, name, icon }: { slug: string; name: strin
       const updateMotion = () => { controls.autoRotate = !motion.matches; };
       motion.addEventListener("change", updateMotion); updateMotion();
       let cameraDistance = 6.6;
-      const reset = () => { model.rotation.set(0, -.2, 0); camera.position.set(0, .08, cameraDistance); controls.target.set(0, 0, 0); controls.update(); };
+      const reset = () => { model.rotation.set(...(reference.rotation ?? [0, -.2, 0] as const)); camera.position.set(0, .08, cameraDistance); controls.target.set(0, 0, 0); controls.update(); };
       const resize = () => {
         const width = host.clientWidth, height = host.clientHeight;
         if (!width || !height) return;
@@ -91,10 +91,9 @@ export function SpecialtyModel({ slug, name, icon }: { slug: string; name: strin
       if (cancelled) { disposeModel(gltf.scene); return; }
       gltf.scene.traverse((object) => {
         if (object instanceof THREE.Mesh) {
-          // Subtle clearcoat preserves surface detail without a shiny plastic appearance.
-          const source = object.material as InstanceType<typeof THREE.MeshStandardMaterial>;
-          const material = new THREE.MeshPhysicalMaterial({ color: source.color, roughness: .55, metalness: 0, clearcoat: .12, clearcoatRoughness: .48, side: THREE.DoubleSide });
-          source.dispose(); object.material = material;
+          // Preserve each asset's tissue, enamel, rubber and metal finishes.
+          const materials = Array.isArray(object.material) ? object.material : [object.material];
+          materials.forEach((material) => { material.side = THREE.DoubleSide; });
         }
       });
       model.add(gltf.scene); reset();
@@ -113,8 +112,8 @@ export function SpecialtyModel({ slug, name, icon }: { slug: string; name: strin
   return (
     <div className={styles.wrapper}>
       <div className={styles.halo} aria-hidden="true" />
-      <div className={styles.topline}><span className={styles.tag}><span /> INTERACTIVE ANATOMY</span><span className={styles.modelNumber}>3D / {String(Object.keys(anatomyModels).indexOf(slug) + 1).padStart(2, "0")}</span></div>
-      <div className={styles.viewport} ref={hostRef} role="img" aria-label={`Interactive anatomical model for ${name}: ${reference.label}. Use arrow keys to rotate, plus or minus to zoom, Home to reset.`} tabIndex={status === "ready" ? 0 : -1} onKeyDown={(event) => {
+      <div className={styles.topline}><span className={styles.tag}><span /> INTERACTIVE 3D</span><span className={styles.modelNumber}>3D / {String(Object.keys(anatomyModels).indexOf(slug) + 1).padStart(2, "0")}</span></div>
+      <div className={styles.viewport} ref={hostRef} role="img" aria-label={`Interactive 3D model for ${name}: ${reference.label}. Use arrow keys to rotate, plus or minus to zoom, Home to reset.`} tabIndex={status === "ready" ? 0 : -1} onKeyDown={(event) => {
         if (["ArrowLeft", "ArrowRight", "+", "=", "-", "Home"].includes(event.key)) event.preventDefault();
         if (event.key === "ArrowLeft" || event.key === "ArrowRight") actions.current?.rotate(event.key === "ArrowLeft" ? -.25 : .25);
         if (event.key === "+" || event.key === "=") actions.current?.zoom(.9);
@@ -124,8 +123,6 @@ export function SpecialtyModel({ slug, name, icon }: { slug: string; name: strin
       {status !== "ready" && <div className={styles.fallback}><Icon name={icon} size={65} strokeWidth={1} /><span role="status">{status === "loading" ? "Preparing your 3D view…" : "3D view unavailable on this device."}</span>{status === "error" && <button type="button" onClick={() => { setStatus("loading"); setAttempt((value) => value + 1); }}>Try again</button>}</div>}
       <div className={styles.base} aria-hidden="true" />
       <div className={styles.bottom}><div className={styles.modelTitle}><strong>{reference.label}</strong><span>{reference.note || "Anatomical reference model"}</span></div>
-        {status === "ready" && <><p>Drag horizontally to rotate · Use the controls to explore</p><div className={styles.controls}><button type="button" aria-label="Rotate model left" onClick={() => actions.current?.rotate(-.4)}>←</button><button type="button" aria-label="Zoom out" onClick={() => actions.current?.zoom(1.1)}>−</button><button type="button" onClick={() => actions.current?.reset()}>Reset view</button><button type="button" aria-label="Zoom in" onClick={() => actions.current?.zoom(.9)}>+</button><button type="button" aria-label="Rotate model right" onClick={() => actions.current?.rotate(.4)}>→</button></div></>}
-        <details className={styles.credits}><summary>Model source & credits</summary><p>{reference.source === "bodyparts" ? <>BodyParts3D, © The Database Center for Life Science. <a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noopener noreferrer">Source & license</a>.</> : <>Human Reference Atlas / HuBMAP, Kristen Browne and Heidi Schlehlein. Visible Human Dataset, National Library of Medicine. <a href="https://humanatlas.io/3d-reference-library" target="_blank" rel="noopener noreferrer">Source library</a>.</>} <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Adapted colors, framing and selected structures. <a href="/models/anatomy/NOTICE.md" target="_blank" rel="noopener noreferrer">Full credits</a>.</p></details>
       </div>
     </div>
   );

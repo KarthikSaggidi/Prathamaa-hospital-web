@@ -1,5 +1,7 @@
 # Home hero image clarity
 
+> Historical implementation notes. The active homepage uses the six 3D campaign banners documented in [hero-banner-hd.md](./hero-banner-hd.md). Retired banner files referenced below have been removed during unused-asset cleanup.
+
 Asset: `public/images/home-hero-sharp.png`
 
 Created with the built-in image_gen tool from the existing `public/images/home-glass-hero.png`. The selected enhancement preserves the scene's composition. The original asset is retained.

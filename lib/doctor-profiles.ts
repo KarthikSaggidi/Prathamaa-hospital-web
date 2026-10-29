@@ -1,11 +1,11 @@
 import type { StaticImageData } from "next/image";
-import shivani from "@/assests/derived/doctor-shivani.png";
-import nirban from "@/assests/derived/doctor-nirban.png";
-import susruth from "@/assests/derived/doctor-susruth.png";
+import shivani from "@/public/images/doctors/dr-d-shivani-manne-cutout.png";
+import nirban from "@/public/images/doctors/dr-nirban-mitra-cutout.png";
+import susruth from "@/public/images/doctors/dr-b-susruth-kumar-cutout.png";
 import gopi from "@/assests/derived/doctor-gopi.png";
 import shankar from "@/assests/derived/doctor-shankar.png";
 import naveena from "@/public/images/doctors/dr-pikkalla-naveena-cutout.png";
-import rakesh from "@/public/images/doctors/dr-batta-rakesh-yadav.jpeg";
+import rakesh from "@/public/images/doctors/dr-batta-rakesh-yadav-cutout.png";
 import seshu from "@/public/images/doctors/dr-seshu-mohan-cutout.png";
 
 type DoctorRecord = {

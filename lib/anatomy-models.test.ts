@@ -12,6 +12,11 @@ describe("department anatomy assets", () => {
   test("every available department has a local anatomical model", () => {
     expect(Object.keys(anatomyModels).sort()).toEqual(departments.map((item) => item.slug).sort());
   });
+  test("every department has a unique specialty model", () => {
+    const files = Object.values(anatomyModels).map((model) => model.file);
+    expect(new Set(files).size).toBe(files.length);
+    expect(anatomyModels.pediatrics.note).not.toContain("Adult");
+  });
   for (const file of new Set(Object.values(anatomyModels).map((item) => item.file))) {
     test(`${file}: GLB loads, contains valid geometry and fits the viewer`, async () => {
       const bytes = await readFile(new URL(`../public/models/anatomy/${file}.glb`, import.meta.url));

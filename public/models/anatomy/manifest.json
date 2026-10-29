@@ -403,5 +403,121 @@
       "VH_F_caudate_lobe"
     ],
     "copyright": "Human Reference Atlas / HuBMAP, Kristen Browne and Heidi Schlehlein; Visible Human Dataset, National Library of Medicine. CC BY 4.0. Modified: selected meshes, recentered, recolored."
+  },
+  "pediatric-examination": {
+    "bytes": 167384,
+    "vertices": 7075,
+    "triangles": 11644,
+    "parts": [
+      "Soft pediatric stethoscope tubing",
+      "Left stainless binaural",
+      "Right stainless binaural",
+      "Binaural spring",
+      "Soft ear tips",
+      "Small pediatric chestpiece",
+      "Diaphragm retaining ring",
+      "Pediatric diaphragm",
+      "Diaphragm center",
+      "Infant thermometer body",
+      "Thermometer grip",
+      "Thermometer display",
+      "Thermometer probe",
+      "Thermometer sensor"
+    ],
+    "copyright": "Original Prathamaa specialty illustration. Not a patient scan or a medical-device specification."
+  },
+  "skin-cross-section": {
+    "bytes": 1757584,
+    "vertices": 76792,
+    "triangles": 136536,
+    "parts": [
+      "Subcutaneous tissue",
+      "Reticular dermis",
+      "Papillary dermis",
+      "Epidermis",
+      "Skin microrelief",
+      "Adipose lobules",
+      "Hair follicle sheath",
+      "Hair bulb",
+      "Hair shaft",
+      "Sebaceous gland",
+      "Arrector pili muscle",
+      "Coiled sweat gland",
+      "Sweat duct",
+      "Dermal vessels",
+      "Capillary loops",
+      "Dermal vessels",
+      "Capillary loops",
+      "Sensory nerve",
+      "Sensory nerve endings"
+    ],
+    "copyright": "Original Prathamaa specialty illustration. Not a patient scan or a medical-device specification."
+  },
+  "medicine-torso": {
+    "bytes": 7488360,
+    "vertices": 292914,
+    "triangles": 386917,
+    "parts": [
+      "FJ2417 · cusp of cardiac valve; FJ2418 · anterolateral head of lateral papillary muscle of left ventricle; FJ2419 · anterior papillary muscle of right ventricle; FJ2420 · leaflet of mitral valve; FJ2421 · leaflet of tricuspid valve; FJ2422 · anatomical space; FJ2423 · anatomical space; FJ2424 · anatomical space; FJ2425 · anatomical space; FJ2426 · cusp of cardiac valve; FJ2427 · cusp of cardiac valve; FJ2429 · lateral papillary muscle of left ventricle; FJ2430 · posterior papillary muscle of right ventricle; FJ2431 · cusp of cardiac valve; FJ2432 · leaflet of mitral valve; FJ2433 · leaflet of tricuspid valve; FJ2434 · cusp of cardiac valve; FJ2435 · cusp of cardiac valve; FJ2436 · leaflet of tricuspid valve; FJ2437 · septal papillary muscle of right ventricle; FJ2438 · wall of left atrium; FJ2439 · wall of right atrium; FJ2631 · trunk of branch of coronary artery; FJ2632 · right anterior branch of anterior interventricular branch of left coronary artery; FJ2633 · diagonal branch of anterior descending branch of left coronary artery; FJ2634 · diagonal branch of anterior descending branch of left coronary artery; FJ2635 · diagonal branch of anterior descending branch of left coronary artery; FJ2636 · diagonal branch of anterior descending branch of left coronary artery; FJ2637 · diagonal branch of anterior descending branch of left coronary artery; FJ2638 · diagonal branch of anterior descending branch of left coronary artery; FJ2639 · diagonal branch of anterior descending branch of left coronary artery; FJ2640 · diagonal branch of anterior descending branch of left coronary artery; FJ2641 · right anterior branch of anterior interventricular branch of left coronary artery; FJ2642 · diagonal branch of anterior descending branch of left coronary artery; FJ2643 · conus branch of anterior interventricular branch of left coronary artery; FJ2644 · conus branch of anterior interventricular branch of left coronary artery; FJ2645 · right anterior branch of anterior interventricular branch of left coronary artery; FJ2646 · right anterior branch of anterior interventricular branch of left coronary artery; FJ2647 · right anterior branch of anterior interventricular branch of left coronary artery; FJ2648 · diagonal branch of anterior descending branch of left coronary artery; FJ2649 · circumflex branch of left coronary artery; FJ2650 · circumflex branch of left coronary artery; FJ2651 · circumflex branch of left coronary artery; FJ2652 · circumflex branch of left coronary artery; FJ2653 · circumflex branch of left coronary artery; FJ2654 · circumflex branch of left coronary artery; FJ2655 · coronary sinus; FJ2656 · great cardiac vein; FJ2667 · anterior ventricular branch of right coronary artery; FJ2668 · anterior ventricular branch of right coronary artery; FJ2670 · right conus artery; FJ2671 · anterior ventricular branch of right coronary artery; FJ2672 · anterior ventricular branch of right coronary artery; FJ2673 · anterior ventricular branch of right coronary artery; FJ2674 · anterior ventricular branch of right coronary artery; FJ2675 · anterior ventricular branch of right coronary artery; FJ2676 · right conus artery; FJ2677 · anterior ventricular branch of right coronary artery; FJ2692 · posterior interventricular branch of right coronary artery; FJ2693 · posterior interventricular branch of right coronary artery; FJ2694 · posterior interventricular branch of right coronary artery; FJ2695 · posterior interventricular branch of right coronary artery; FJ2696 · posterior interventricular branch of right coronary artery; FJ2697 · posterior interventricular branch of right coronary artery; FJ2698 · posterior interventricular branch of right coronary artery; FJ2699 · posterior interventricular branch of right coronary artery; FJ2700 · posterior interventricular branch of right coronary artery; FJ2714 · posterior ventricular branch of right coronary artery; FJ2715 · posterior ventricular branch of right coronary artery; FJ2716 · posterior ventricular branch of right coronary artery; FJ2717 · posterior ventricular branch of right coronary artery; FJ2718 · posterior ventricular branch of right coronary artery; FJ2719 · posterior ventricular branch of right coronary artery; FJ2720 · posterior ventricular branch of right coronary artery; FJ2721 · posterior ventricular branch of right coronary artery; FJ2722 · posterior ventricular branch of right coronary artery; FJ2723 · trunk of right coronary artery; FJ2724 · small cardiac vein; FJ2727 · right marginal vein; FJ2728 · right marginal vein; FJ2729 · right marginal vein; FJ2731 · small cardiac vein; FJ2737 · trunk of left coronary artery",
+      "HRA / HuBMAP · lung surfaces and lobar bronchi",
+      "FJ1883 · physical anatomical entity; FJ1893 · left portal vein; FJ1913 · right portal vein; FJ1914 · region of vascular tree organ; FJ1916 · hepatic artery; FJ2386 · hepatic artery; FJ2404 · left portal vein; FJ2405 · right portal vein; FJ2409 · hepatovenous subsector; FJ2415 · hepatic vein; FJ2416 · hepatic vein; FJ2816 · caudate lobe of liver; FJ2818 · hepatovenous subsector; FJ2819 · hepatovenous subsector; FJ2820 · hepatovenous subsector; FJ2821 · hepatovenous subsector; FJ2822 · hepatovenous subsector; FJ2823 · hepatovenous subsector; FJ2824 · hepatovenous subsector; FJ3071 · physical anatomical entity; FJ3072 · physical anatomical entity; FJ3073 · anterior superior segmental branch of right portal vein; FJ3074 · anterior inferior segmental branch of right portal vein; FJ3075 · hepatic artery; FJ3076 · hepatic artery; FJ3077 · hepatic artery; FJ3081 · hepatic artery proper; FJ3083 · tributary of middle hepatic vein; FJ3086 · tributary of middle hepatic vein; FJ3088 · physical anatomical entity; FJ3089 · physical anatomical entity; FJ3090 · physical anatomical entity; FJ3091 · hepatic artery; FJ3092 · hepatic artery; FJ3093 · hepatic artery; FJ3095 · trunk of branch of coeliac artery; FJ3096 · bile duct; FJ3102 · trunk of portal vein; FJ3103 · physical anatomical entity; FJ3104 · physical anatomical entity; FJ3105 · physical anatomical entity; FJ3106 · hepatic artery; FJ3107 · hepatic artery; FJ3108 · physical anatomical entity; FJ3109 · physical anatomical entity; FJ3110 · physical anatomical entity; FJ3111 · posterior inferior segmental branch of right portal vein; FJ3112 · posterior superior segmental branch of right portal vein; FJ3113 · posterior superior segmental branch of right portal vein; FJ3114 · hepatic artery; FJ3115 · hepatic artery; FJ3116 · hepatic artery; FJ3117 · trunk of branch of coeliac artery; FJ3122 · trunk of portal vein; FJ3123 · bile duct; FJ3124 · caudate lobe branch of left portal vein; FJ3125 · lateral inferior segmental branch of left portal vein; FJ3126 · lateral superior segmental branch of left portal vein; FJ3127 · medial superior segmental branch of left portal vein; FJ3128 · medial inferior segmental branch of left portal vein",
+      "FJ2564 · stomach",
+      "FJ3145 · kidney; FJ3147 · kidney",
+      "FJ2541 · trachea",
+      "FJ2561 · spleen"
+    ],
+    "copyright": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International; Human Reference Atlas / HuBMAP, Kristen Browne and Heidi Schlehlein, Visible Human Dataset, National Library of Medicine, CC BY 4.0. Lung surfaces registered to atlas lung-region bounds."
+  },
+  "digestive-surgery": {
+    "bytes": 4096704,
+    "vertices": 129488,
+    "triangles": 229116,
+    "parts": [
+      "FJ1883 · physical anatomical entity; FJ1893 · left portal vein; FJ1913 · right portal vein; FJ1914 · region of vascular tree organ; FJ1916 · hepatic artery; FJ2386 · hepatic artery; FJ2404 · left portal vein; FJ2405 · right portal vein; FJ2409 · hepatovenous subsector; FJ2415 · hepatic vein; FJ2416 · hepatic vein; FJ2816 · caudate lobe of liver; FJ2818 · hepatovenous subsector; FJ2819 · hepatovenous subsector; FJ2820 · hepatovenous subsector; FJ2821 · hepatovenous subsector; FJ2822 · hepatovenous subsector; FJ2823 · hepatovenous subsector; FJ2824 · hepatovenous subsector; FJ3071 · physical anatomical entity; FJ3072 · physical anatomical entity; FJ3073 · anterior superior segmental branch of right portal vein; FJ3074 · anterior inferior segmental branch of right portal vein; FJ3075 · hepatic artery; FJ3076 · hepatic artery; FJ3077 · hepatic artery; FJ3081 · hepatic artery proper; FJ3083 · tributary of middle hepatic vein; FJ3086 · tributary of middle hepatic vein; FJ3088 · physical anatomical entity; FJ3089 · physical anatomical entity; FJ3090 · physical anatomical entity; FJ3091 · hepatic artery; FJ3092 · hepatic artery; FJ3093 · hepatic artery; FJ3095 · trunk of branch of coeliac artery; FJ3096 · bile duct; FJ3102 · trunk of portal vein; FJ3103 · physical anatomical entity; FJ3104 · physical anatomical entity; FJ3105 · physical anatomical entity; FJ3106 · hepatic artery; FJ3107 · hepatic artery; FJ3108 · physical anatomical entity; FJ3109 · physical anatomical entity; FJ3110 · physical anatomical entity; FJ3111 · posterior inferior segmental branch of right portal vein; FJ3112 · posterior superior segmental branch of right portal vein; FJ3113 · posterior superior segmental branch of right portal vein; FJ3114 · hepatic artery; FJ3115 · hepatic artery; FJ3116 · hepatic artery; FJ3117 · trunk of branch of coeliac artery; FJ3122 · trunk of portal vein; FJ3123 · bile duct; FJ3124 · caudate lobe branch of left portal vein; FJ3125 · lateral inferior segmental branch of left portal vein; FJ3126 · lateral superior segmental branch of left portal vein; FJ3127 · medial superior segmental branch of left portal vein; FJ3128 · medial inferior segmental branch of left portal vein",
+      "FJ2564 · stomach",
+      "FJ2574 · zone of small intestine; FJ2575 · zone of small intestine; FJ2576 · zone of small intestine; FJ2577 · zone of small intestine; FJ2578 · zone of small intestine; FJ2579 · zone of small intestine; FJ2580 · zone of small intestine; FJ2581 · zone of small intestine; FJ2582 · zone of small intestine; FJ2583 · zone of small intestine; FJ2584 · zone of small intestine; FJ2585 · zone of small intestine; FJ2586 · zone of small intestine; FJ2587 · zone of small intestine; FJ2588 · zone of small intestine; FJ2589 · zone of small intestine; FJ2590 · zone of small intestine; FJ2591 · zone of small intestine; FJ2592 · zone of small intestine; FJ2593 · zone of small intestine; FJ2594 · zone of small intestine; FJ2595 · zone of small intestine; FJ2596 · zone of small intestine; FJ2597 · zone of small intestine; FJ2598 · zone of small intestine; FJ2600 · zone of small intestine; FJ2601 · zone of small intestine; FJ2602 · zone of small intestine; FJ2603 · zone of small intestine; FJ2604 · zone of small intestine; FJ2605 · zone of small intestine; FJ2606 · zone of small intestine; FJ2607 · zone of small intestine; FJ2608 · zone of small intestine; FJ2609 · zone of small intestine; FJ2610 · zone of small intestine; FJ2611 · zone of small intestine; FJ2612 · zone of small intestine; FJ2613 · zone of small intestine; FJ2614 · zone of small intestine; FJ2615 · zone of small intestine; FJ2616 · zone of small intestine; FJ2617 · zone of small intestine; FJ2618 · zone of small intestine; FJ2619 · zone of small intestine; FJ2620 · zone of small intestine; FJ2621 · zone of small intestine; FJ2622 · zone of small intestine; FJ2623 · zone of small intestine; FJ2624 · zone of small intestine; FJ2625 · zone of small intestine; FJ2626 · zone of small intestine; FJ2627 · zone of small intestine; FJ2628 · zone of small intestine",
+      "FJ2566 · segment of large intestine; FJ2567 · segment of large intestine; FJ2571 · segment of large intestine; FJ2572 · segment of large intestine",
+      "FJ2817 · gallbladder",
+      "FJ1895 · pancreas"
+    ],
+    "copyright": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  },
+  "ent-airways": {
+    "bytes": 564040,
+    "vertices": 25479,
+    "triangles": 41936,
+    "parts": [
+      "FJ3269 · bone organ; FJ3272 · bone organ; FJ3289 · bone organ; FJ3375 · bone organ; FJ3378 · bone organ; FJ3386 · bone organ",
+      "FJ2811 · subdivision of head",
+      "FJ2554 · cartilage organ; FJ2555 · cartilage organ; FJ2556 · cartilage organ; FJ2557 · cartilage organ; FJ2558 · cartilage organ; FJ3263 · bone organ; FJ3369 · bone organ",
+      "FJ2770 · anatomical cluster",
+      "FJ2772 · bone organ; FJ2808 · thyroid cartilage; FJ3201 · bone organ",
+      "FJ2541 · trachea"
+    ],
+    "copyright": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  },
+  "anesthesia-airway": {
+    "bytes": 217572,
+    "vertices": 8461,
+    "triangles": 18614,
+    "parts": [
+      "FJ2772 · bone organ; FJ2808 · thyroid cartilage; FJ3201 · bone organ",
+      "FJ2440 · cricoid cartilage; FJ2769 · cricoid cartilage; FJ2775 · cartilage organ; FJ2792 · cartilage organ",
+      "FJ2541 · trachea",
+      "FJ2450 · left main bronchus"
+    ],
+    "copyright": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  },
+  "maxillofacial-jaw": {
+    "bytes": 1540872,
+    "vertices": 66908,
+    "triangles": 121888,
+    "parts": [
+      "FJ3289 · bone organ",
+      "FJ3269 · bone organ; FJ3281 · bone organ; FJ3287 · bone organ; FJ3375 · bone organ; FJ3386 · bone organ; FJ3392 · bone organ; FJ3394 · bone organ",
+      "FJ1254 · tooth; FJ1255 · tooth; FJ1256 · tooth; FJ1257 · tooth; FJ1258 · tooth; FJ1259 · tooth; FJ1260 · tooth; FJ1261 · tooth; FJ1262 · tooth; FJ1263 · tooth; FJ1264 · tooth; FJ1265 · tooth; FJ1266 · tooth; FJ1267 · tooth; FJ1268 · tooth; FJ1269 · tooth; FJ1270 · tooth; FJ1271 · tooth; FJ1272 · tooth; FJ1273 · tooth; FJ1274 · tooth; FJ1275 · tooth; FJ1276 · tooth; FJ1277 · tooth; FJ1278 · tooth; FJ1279 · tooth; FJ1280 · tooth; FJ1281 · tooth",
+      "FJ1294 · muscle organ; FJ1295 · muscle organ; FJ1304 · muscle organ; FJ1306 · muscle organ; FJ1308 · muscle organ; FJ1322 · muscle organ; FJ1323 · muscle organ; FJ1345 · muscle organ; FJ1346 · muscle organ; FJ1355 · muscle organ; FJ1357 · muscle organ; FJ1359 · muscle organ; FJ1373 · muscle organ; FJ1374 · muscle organ"
+    ],
+    "copyright": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
   }
 }

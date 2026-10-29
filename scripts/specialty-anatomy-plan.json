@@ -1,0 +1,209 @@
+{
+  "medicine-torso": {
+    "parts": [
+      {
+        "names": [
+          "heart"
+        ],
+        "color": "#ae4f53",
+        "relation": "partof"
+      },
+      {
+        "names": [
+          "left lung", "right lung"
+        ],
+        "color": "#ce9a96",
+        "relation": "partof"
+      },
+      {
+        "names": [
+          "liver"
+        ],
+        "color": "#995044",
+        "relation": "partof"
+      },
+      {
+        "names": [
+          "stomach"
+        ],
+        "color": "#d7a799"
+      },
+      {
+        "names": [
+          "kidney"
+        ],
+        "color": "#a45450"
+      },
+      {
+        "names": [
+          "trachea"
+        ],
+        "color": "#dfcbb5"
+      },
+      {
+        "names": [
+          "spleen"
+        ],
+        "color": "#83526b"
+      }
+    ]
+  },
+  "digestive-surgery": {
+    "parts": [
+      {
+        "names": [
+          "liver"
+        ],
+        "color": "#a65c48",
+        "relation": "partof"
+      },
+      {
+        "names": [
+          "stomach"
+        ],
+        "color": "#d5a191"
+      },
+      {
+        "names": [
+          "zone of small intestine"
+        ],
+        "color": "#ca9489"
+      },
+      {
+        "names": [
+          "segment of large intestine"
+        ],
+        "color": "#b98b7b"
+      },
+      {
+        "names": [
+          "gallbladder"
+        ],
+        "color": "#82946b"
+      },
+      {
+        "names": [
+          "pancreas"
+        ],
+        "color": "#d4b384"
+      }
+    ]
+  },
+  "ent-airways": {
+    "parts": [
+      {
+        "names": [
+          "mandible",
+          "right maxilla",
+          "left maxilla",
+          "right nasal bone",
+          "left nasal bone",
+          "right temporal bone"
+        ],
+        "color": "#dfcdb0"
+      },
+      {
+        "names": [
+          "external ear"
+        ],
+        "color": "#c99a83"
+      },
+      {
+        "names": [
+          "nasal cartilage",
+          "inferior nasal concha"
+        ],
+        "color": "#b7887b"
+      },
+      {
+        "names": [
+          "subdivision of pharynx"
+        ],
+        "color": "#ba7978"
+      },
+      {
+        "names": [
+          "thyroid cartilage",
+          "hyoid bone"
+        ],
+        "color": "#dfc5a8"
+      },
+      {
+        "names": [
+          "trachea"
+        ],
+        "color": "#cfae96"
+      }
+    ]
+  },
+  "anesthesia-airway": {
+    "parts": [
+      {
+        "names": [
+          "thyroid cartilage",
+          "hyoid bone"
+        ],
+        "color": "#e1ccb1"
+      },
+      {
+        "names": [
+          "cricoid cartilage",
+          "arytenoid cartilage"
+        ],
+        "color": "#d5bfa2"
+      },
+      {
+        "names": [
+          "trachea"
+        ],
+        "color": "#d6b49f"
+      },
+      {
+        "names": [
+          "main bronchus"
+        ],
+        "color": "#c69f90"
+      },
+      {
+        "names": [
+          "esophagus"
+        ],
+        "color": "#b57172"
+      }
+    ]
+  },
+  "maxillofacial-jaw": {
+    "parts": [
+      {
+        "names": [
+          "mandible"
+        ],
+        "color": "#d9c1a0"
+      },
+      {
+        "names": [
+          "right maxilla",
+          "left maxilla",
+          "right zygomatic bone",
+          "left zygomatic bone",
+          "right temporal bone",
+          "left temporal bone",
+          "sphenoid bone"
+        ],
+        "color": "#e6d5b9"
+      },
+      {
+        "names": [
+          "tooth"
+        ],
+        "color": "#f6eedb"
+      },
+      {
+        "names": [
+          "muscle of face"
+        ],
+        "color": "#ac6259"
+      }
+    ]
+  }
+}
